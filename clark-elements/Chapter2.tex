@@ -1,0 +1,994 @@
+\chapter{Group Theory}
+
+\section{Definition of group structure}
+
+\subsection{Article 26. Groups}
+\subsubsection{Problem 26$\alpha$.}
+Show that the set of all mappings from a given set $X$ to itself forms a
+semigroup in which the product is composition of mappings. Show that the
+set of all one-to-one correspondences of $X$ with itself forms a group
+under composition.
+
+\paragraph*{Solution to 26$\alpha$.}
+Let $F = \{ f \mid f : X \rightarrow X \}$. For $ f, g, h \in F$, we have
+$(fg)h = f(gh)$ by \textbf{16}. Thus $F$ is a semigroup.
+
+Let $ G \subset F$ be the set of all one-to-one correspondences. The mapping
+$ 1_G \in G $ (where $1_G x = x$ for all $ x \in G$) is the identity element
+since $1_G f = f 1_G = f $ for all $ f \in F$ (and thus $G$). Since each
+$f \in G$ is a one-to-one correspondence, $ f^{-1} $ exists, $ f^{-1} \in G$ and
+$f^{-1} f = f f^{-1} = 1_G$.
+
+\subsubsection{Problem 26$\beta$.}
+Let $S$ be a semigroup with an element $e$ such that $ea = a = ae$ for all
+$a \in S$. Show that $e$ is unique.
+
+\paragraph*{Solution to 26$\beta$.}
+Suppose there were another element $e'$ such that $e'a = a = ae'$ for all
+$a \in S$. Then $ e = ee' = e'$.
+
+\subsubsection{Problem 26$\gamma$.}
+Let $S$ be a semigroup with an element $e$ such that $ea = a$ for all $a \in S$
+and such that for every $a \in S$ there exists an element $a^{-1}$ for which
+$a^{-1} a = e$. Prove that $S$ is a group.
+
+\paragraph*{Solution to 26$\gamma$.}
+$ ee = e = e^{-1} e $.
+$ae = e(ae) = (ea)e = ae $.
+$a^{-1} a = (a^{-1} a) (a^{-1} a) = e$.
+??
+
+\subsubsection{Problem 26$\epsilon$.}
+Let $G$ be a group. Define a new product on $G$ by $a * b = ba $ for any
+$a, b \in G$. Show that $G^*$ (the set $G$ with product $*$) is a group.
+
+\paragraph*{Solution to 26$\epsilon$.}
+(1) $(a*b)*c = c(ba) = (cb)a = a*(b*c)$ for any $a, b, c \in G$. (2) The identity
+$e$ in $G$ is the identity in $G^*$: $e * a = ae = a = ea = a * e$.
+(3) Inverses are also the same: $a * a^{-1} = a^{-1} a = e = a a^{-1} = a^{-1} * a$.
+
+\subsubsection{Problem 26$\zeta$.}
+Let $G$ and $G'$ be groups. Define a product operation on the set $G \times G'$ by the
+rule $(a, a')(b, b') = (ab, a'b')$. Show that $G \times G'$ is a group under this
+product. ($G \times G'$ is called the \textit{direct product} of $G$ and $G'$).
+
+\paragraph*{Solution to 26$\zeta$.}
+Since $ab \in G$ and $a'b' \in G'$, we have $(ab, a'b') \in G \times G'$ i.e. the
+product is closed. Next we have $((a,a')(b,b'))(c,c') = (ab, a'b')(c,c') =
+(abc, a'b'c') = (a, a')(bc, b'c') = (a,a')((b,b')(c,c')) $ so that the product
+is associative. The identity is $(e, e')$ since $(a,a')(e,e') = (ae, a'e') =
+(a,a') = (ea, e'a') = (e,e')(a,a')$. The inverse of $(a, a')$ is $(a^{-1},(a')^{-1}$
+since $(a,a')(a^{-1},(a')^{-1}) = (aa^{-1},a'(a')^{-1}) = (e,e') =
+(a^{-1}a, (a')^{-1}a') = (a^{-1},(a')^{-1})(a,a')$.
+
+\subsubsection{Problem 26$\eta$.}
+
+\paragraph*{Solution to 26$\eta$.}
+There are six elements in the group:
+\begin{center}
+\begin{tabular}{c|c}
+Rotations & Inversions \\
+\hline
+$ABC \rightarrow ABC$ & $ABC \rightarrow CBA $ \\
+$ABC \rightarrow BCA$ & $ABC \rightarrow ACB $ \\
+$ABC \rightarrow CAB$ & $ABC \rightarrow BAC $
+\end{tabular}
+\end{center}
+
+\subsubsection{Problem 26$\theta$.}
+The group of symmetries of a regular polygon of $n$ sides is called the
+\textit{dihedral group $D_n$}. How many elements does $D_n$ have?
+
+\paragraph*{Solution to 26$\theta$.}
+The order of the sides and angles cannot be changed, so only two choices
+affect the symmetry: where to place an angle, and what side of the polygon
+is forward. For the angle there are $n$ choices of corners. For the side
+there are $2$ choices. This gives $2n$ elements of the group.
+
+\subsubsection{Problem 26$\kappa$.}
+Show that the power set $2^X$ of any set $X$ is a group under the operation
+of symmetric difference $A * B$ (\textbf{8$\alpha$}).
+
+\paragraph*{Solution to 26$\kappa$.}
+$A * B \in 2^X $ for any $A, B \in X$. The symmetric difference is associative
+(see \textbf{8$\alpha$}). $A*\emptyset = \emptyset*A = A$ so that $\emptyset$
+plays the role of identity. Finally, $ A*A = \emptyset $ so each element is its
+own inverse.
+
+\subsubsection{Problem 26$\lambda$.}
+Show that the set $(-1, 1)$ of real numbers $x$ such that $ -1 < x < 1$ forms
+a group under the operation $x y = (x +y) / (1 + xy)$.
+
+\paragraph*{Solution to 26$\lambda$.}
+\begin{eqnarray*}
+(xy)z = & \frac{\frac{x+y}{1+xy} + z}{1+\frac{x+y}{1+xy}z} \\
+      = & \frac{\frac{x+y}{1+xy} + z}{1+\frac{x+y}{1+xy}z} \frac{1+xy}{1+xy} \\
+      = & \frac{x + y + z + xyz}{1 + xy + xz + yz} \\
+      = & \frac{x(1+yz) + (y+z)}{(1+yz) + x(y+z)} \\
+      = & \frac{x + \frac{y+z}{1+yz}}{1 + x \frac{y+z}{1+yz}} \\
+      = & x(yz)
+\end{eqnarray*}
+
+$e = 0$: $xe = (x + 0)/(1 + x0) = x = (0 + x)/(1 + 0x) = ex$.
+
+$x^{-1} = -x$: $xx^{-1} = (x + -x)/(1 + x(-x)) = 0 = (-x + x)/(1+(-x)x) = x^{-1}x$.
+
+\subsubsection{Problem 26$\nu$.}
+
+\paragraph*{Solution to 26$\nu$.}
+Define $(a_1, a_2, \dots, a_n)(b_1,b_2,\dots,b_n) = (a_1 b_1, a_2 b_2, \dots, a_n b_n)$
+for elements in $G_1 \times G_2 \times \dots \times G_n$.
+
+\subsection{Article 27.}
+\subsubsection{Problem 27$\alpha$.}
+Show that the five distinct ways of associating a product of four group elements
+in a given order are all equal.
+
+\paragraph*{Solution to 27$\alpha$.}
+Making lots of use of the associativity axiom, we get
+$ ((ab)c)d = (a(bc))d = a((bc)d) = a(b(cd)) = (ab)(cd) $.
+
+\subsection{Article 28. Implications of group structure.}
+\subsubsection{Problem 28$\beta$.}
+Let $a$ be an element of a group $G$. Show that the mapping $ \lambda_a : G \rightarrow G$
+given by $ \lambda_a g = ag$ for any $g \in G$ is a one-to-one correspondence.
+
+\paragraph*{Solution to 28$\beta$.}
+Since $G$ is a group, for any $g \in G$ there exists an element $h= a^{-1} g \in G$ such
+that $ \lambda_a h = ah = aa^{-1}g = g$ so that $\lambda_a$ is onto. Suppose
+next that $\lambda_a g = \lambda_a h$ for two elements $g, h \in G$. Then
+$ ag = ah $ which implies $ g = h $ and thus $\lambda_a $ is one-to-one, hence
+a one-to-one correspondence since $\lambda_a$ is also onto.
+
+\subsubsection{Problem 28$\gamma$.}
+A group $G$ is \textit{isomorphic} to a group $G'$ if there exists a one-to-one
+correspondence $\phi : G \rightarrow G$ such that $ \phi(ab) = (\phi a) (\phi b)$,
+or in other words, such that $\phi$ preserves group products. Show that such a
+mapping $\phi$ (called an \textit{isomorphism}) also preserves identity elements
+and inverses.
+
+\paragraph*{Solution to 28$\gamma$.}
+$\phi$ preserves identity elements because $\phi(e) = \phi(ee) = (\phi e)(\phi e)$
+which implies $ \phi e = e'$ ($e'$ is the identity of $G'$). $\phi$ preserves
+inverses since $e' = \phi e = \phi (a a^{-1}) = (\phi a)(\phi a^{-1})$ so that
+$(\phi a)^{-1} = \phi a^{-1}$ since inverses are unique (\textbf{28}).
+
+\subsection{Article 29. Abelian groups}
+\subsubsection{Problem 29$\beta$.}
+Prove that a group with less than six elements is abelian. Construct a group
+with six elements that is not abelian, and one that is.
+
+\paragraph*{Solution to 29$\beta$.}
+A group with one element, $G = \left\{ e \right\}$ is obviously abelian. Groups
+with 2, 3, and 5 elements all have prime order and are cyclic, hence they are
+abelian. There are only two distinct groups with four elements (up to isomorphism).
+One of them is cyclic and hence abelian. The other is $D_2$, the symmetries of
+a rectangle (see Table \ref{table:group_d2}). By inspection, this is abelian
+as well.
+
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}[ht]{c|cccc}
+    & $e$ & $a$ & $b$ & $c$ \\
+\hline
+$e$ & $e$ & $a$ & $b$ & $c$ \\
+$a$ & $a$ & $e$ & $c$ & $b$ \\
+$b$ & $b$ & $c$ & $e$ & $a$ \\
+$c$ & $c$ & $b$ & $a$ & $e$ \\
+\end{tabular}
+\end{center}
+\caption{The group $D_2$}
+\label{table:group_d2}
+\end{table}
+
+A group with six elements that is not abelian is $D_3$. A group with six
+elements that is abelian is $\mathbb{Z}_6 = \left\{[0]_6, [1]_6, \dots ,[5]_6 \right\}$.
+
+\subsubsection{Problem 29$\delta$.}
+Show that a group $G$ in which $x^2 = e$ for every $ x \in G$ is an abelian group.
+
+\paragraph*{Solution to 29$\delta$.}
+$x^2 = e $ implies $x = x^{-1}$ for every $ x \in G$.
+This gives $ ab = (ab)^{-1} = b^{-1} a^{-1} = ba$.
+
+
+\section{Examples of group structure}
+
+
+\subsection{Article 30. Symmetric group on n letters}
+\subsubsection{Problem 30$\alpha$.}
+Show that $S_n$ has $n!$ elements.
+
+\paragraph*{Solution to 30$\alpha$.}
+$S_n$ is the collection of all one-to-one correspondences
+$f:\mathbb{N}_k \rightarrow \mathbb{N}_k$. There are $n$ choices for the value
+of $f(1)$. Once $f(1)$ is determined, there are $n-1$ choices for the value of
+$f(2)$. Continuing this way, we have $n \cdot (n-1) \cdots 2 \cdot 1 = n!$ distinct
+one-to-one correspondences.
+
+\subsubsection{Problem 30$\beta$.}
+Show that $S_n$ is not abelian for $n > 2$.
+
+\paragraph*{Solution to 30$\beta$.}
+Consider $S_3$. Let $\pi$ be defined as $\pi(1) = 1$, $\pi(2) = 3$ and $\pi(3) = 2$,
+and let $\rho$ be defined as $\rho(1) = 2$, $\rho(2) = 3$ and $\rho(3) = 1$. Clearly
+$\pi, \rho \in S_3$. Now we have $\pi \rho (1) = \rho (\pi (1)) = \rho (1) = 2$,
+$\pi \rho (2) = 1$ and $\pi \rho (3) = 3$, but $\rho \pi (1) = 3$, $\rho \pi (2) = 2$
+and $\rho \pi (3) = 1$. Thus $\pi \rho \neq \rho \pi$ and $S_3$ is not abelian.
+
+Now suppose $S_{n-1}$ is not abelian. Then there exist elements, say $\pi_{n-1}$
+and $\rho_{n-1}$ such that $\pi_{n-1} \rho_{n-1} \neq \rho_{n-1} \pi_{n-1}$.
+Consider the elements $\pi_n, \rho_n \in S_n$ defined as $\pi_n(k) = \pi_{n-1}(k)$,
+$\rho_n(k) = \rho_{n-1}(k)$ for $k = 1, 2, \dots, n-1$, and $\pi_n(n) = \rho_n(n) = n$.
+Since $\pi_{n-1} \rho_{n-1} \neq \rho_{n-1} \pi_{n-1}$, there exists some
+$k' \in \mathbb{N}_{n-1}$ such that $\pi_{n-1} \rho_{n-1} (k') \neq \rho_{n-1} \pi_{n-1} (k')$.
+But then $\pi_n \rho_n (k') \neq \rho_n \pi_n (k')$ since $k' < n$. Thus
+$\pi_n \rho_n \neq \rho_n \pi_n$ and $S_n$ is not abelian.
+
+\subsubsection{Problem 30$\gamma$.}
+Construct a group isomorphism from $S_3$ to the dihedral group $D_3$.
+
+\paragraph*{Solution to 30$\gamma$.}
+(\textit{Sketch}) Note that rotations in $D_3$ correspond to the permutations
+$(1,2,3)$, $(3,1,2)$, and $(2,3,1)$ in $S_3$. Rotations plus a flip in $D_3$
+correspond to the permutations $(1,3,2)$, $(2,1,3)$, and $(3,2,1)$. A formal
+isomorphism can be constructed by identifying those elements.
+
+\subsection{Article 31. The Circle Group}
+
+No exercises.
+
+\subsection{Article 32. The Additive Group of Integers}
+
+No exercises.
+
+\subsection{Article 33. The Additive Group of Integers Modulo n}
+
+No exercises.
+
+\subsection{Article 34. The Multiplicative Group Modulo n}
+
+No exercises.
+
+
+\section{Subgroups and cosets}
+
+
+\subsection{Article 35. Subgroups}
+\subsubsection{Problem 35$\alpha$.}
+Show that a nonempty subset $H$ of a group $G$ is a subgroup of $G$ if and only
+if $a, b \in H$ implies $ab^{-1} \in H$.
+
+\paragraph*{Solution to 35$\alpha$.}
+$a,a \in H$ implies $aa^{-1} = e \in H$, so $e,b \in H$ implies $eb^{-1} = b^{-1}
+\in H$. Next, $a, b \in H$ implies $a, b^{-1} \in H$ implies $a(b^{-1})^{-1} =
+ab \in H$.
+
+\subsubsection{Problem 35$\beta$.}
+Let $H_1, H_2, \dots, H_n$ be subgroups of a group $G$. Show that
+$H = \cap_{k=1}^n H_k$ is a subgroup.
+
+\paragraph*{Solution to 35$\beta$.}
+Since $e \in H_k \mbox{ } \forall k$, $H$ is nonempty.
+Suppose $a, b \in H$. Then $a, b \in H_k \mbox{ } \forall k$ which implies
+$ab \in H_k \mbox{ } \forall k$ so that $ab \in H$. Similar argument holds for $a^{-1}$.
+
+\subsubsection{Problem 35$\gamma$.}
+Let $H$ be a subgroup of $G$ and let $a \in G$. Let
+$$ H^a = \left\{x \in G \mid axa^{-1} \in H \right\}. $$
+Show that $H^a$ is a subgroup of $G$.
+
+Let $$N(H) = \left\{ a \in G \mid H^a = H \right\}.$$
+Show that $N(H)$ is a subgroup of $G$ and $H$ is a subgroup of $N(H)$.
+($N(H)$ is called the \textit{normalizer} of $H$.)
+
+\paragraph*{Solution to 35$\gamma$.}
+Since $aea^{-1}=e\in H$, we have $e\in H^a$ so that $H^a$ is not empty.
+
+Suppose $x, y \in H^a$. Then $axa^{-1} \in H$ and $aya^{-1} \in H$ imply that
+$(axa^{-1})(aya^{-1}) = a(xy)a^{-1} \in H$ because $H$ is a subgroup. Hence
+$xy \in H^a$.
+
+Suppose $x \in H^a$. Then $axa^{-1} \in H$ implies
+$(axa^{-1})^{-1} = a(x^{-1})a^{-1} \in H$ since $H$ is a subgroup. Hence
+$x^{-1} \in H^a$.
+
+This shows that $H^a$ is a subgroup of $G$.
+
+\paragraph{}
+Clearly $N(H) \subset G$. Since $H^e=\left\{x\in G \mid x\in H \right\}=H$,
+$e \in N(H)$ and $N(H)$ is not empty.
+
+Suppose $x, y \in N(H)$. Then $H^x = H = H^y$. By definition, this means
+$xzx^{-1} \in H$ if and only if $z \in H$ if and only if $yzy^{-1} \in H$.
+Then we have $x(yzy^{-1})x^{-1} = (xy)z(xy)^{-1} \in H$ so that $xy \in N(H)$.
+
+If $x \in N(H)$, then $H^x=H$ which means $xzx^{-1} \in H$ if and only if
+$z \in H$. Since $H$ is a subgroup, $z \in H \Leftrightarrow z^{-1} \in H$ so that
+$xz^{-1}x^{-1} \in H$. Therefore $z \in H$ if and only if
+$(xz^{-1}x^{-1})^{-1} = x^{-1}zx \in H$ and $H^{x^{-1}} = H$. Thus $x^{-1} \in N(H)$.
+
+This shows that $N(H)$ is a subgroup of $G$.
+
+\paragraph{}
+Since $H$ is a subgroup of $G$, we know $H$ is a group so we need only show
+$H \subset N(H)$. Suppose $h \in H$. Then $H^h = \left\{x \in G \mid hxh^{-1} \in H \right\}$.
+We have $hxh^{-1} \in H$ if and only if $x \in h^{-1}Hh = H$. Thus $H^h=H$,
+$h\in N(H)$, and $H \subset N(H)$.
+
+This shows that $H$ is a subgroup of $N(H)$.
+
+\subsubsection{Problem 35$\delta$.}
+Let $Z_G$ be the set of all elements of a group $G$ which commute with all the
+elements of $G$; that is
+$$ Z_G = \left\{ x \in G \mid xa = ax, a\in G \right\}.$$
+Show that $Z_G$ is a subgroup of $G$. ($Z_G$ is called the \textit{center} of $G$.)
+
+\paragraph*{Solution to 35$\delta$.}
+Suppose $x, y \in Z_G$. Then for any $a\in G$ we have $xa=ax$ and $ya=ay$, and
+$xya=xay=axy$. Hence $xy \in Z_G$.
+
+Suppose $x \in Z_G$. Then for any $a\in G$ we have $xa=ax$ and therefore
+$x^{-1}a=x^{-1}(ax)x^{-1}=x^{-1}(xa)x^{-1}=ax^{-1}$ so that $x^{-1} \in Z_G$.
+
+This shows that $Z_G$ is a subgroup of $G$.
+
+\paragraph{Example}
+As an example of the above material, consider the group $D_4$.
+
+\begin{center}
+\begin{tabular}{c||c|c|c|c||c|c|c|c|}
+      & $e$ & $r$ & $r^2$ & $r^3$ & $a$ & $b$ & $c$ & $d$ \\
+\hline \hline
+$e$   & $e$ & $r$ & $r^2$ & $r^3$ & $a$ & $b$ & $c$ & $d$ \\
+\hline
+$r$   & $r$ & $r^2$ & $r^3$ & $e$ & $d$ & $c$ & $a$ & $b$ \\
+\hline
+$r^2$ & $r^2$ & $r^3$ & $e$ & $r$ & $b$ & $a$ & $d$ & $c$ \\
+\hline
+$r^3$ & $r^3$ & $e$ & $r$ & $r^2$ & $c$ & $d$ & $b$ & $a$ \\
+\hline \hline
+$a$   & $a$ & $c$ & $b$ & $d$ & $e$ & $r^2$ & $r$ & $r^3$ \\
+\hline
+$b$   & $b$ & $d$ & $a$ & $c$ & $r^2$ & $e$ & $r^3$ & $r$ \\
+\hline
+$c$   & $c$ & $b$ & $d$ & $a$ & $r^3$ & $r$ & $e$ & $r^2$ \\
+\hline
+$d$   & $d$ & $a$ & $c$ & $b$ & $r$ & $r^3$ & $r^2$ & $e$ \\
+\hline
+\end{tabular}
+\end{center}
+
+The center $Z_{D_4}$ is $\left\{e, r^2\right\}$.
+
+\subsection{Article 36. Subgroups of $\mathbb{Z}$.}
+\subsubsection{Problem 36$\alpha$.}
+Describe the subgroup $n\mathbb{Z} \cap m\mathbb{Z}$.
+
+\paragraph*{Solution to 36$\alpha$.}
+$[m,n]\mathbb{Z}$ where $[m,n]$ is the least common multiple.
+
+\subsubsection{Problem 36$\beta$.}
+Describe the subgroup of $\mathbb{Z}$ generated by $m$ and $n$, that is,
+by the subset $\{ m, n\}$.
+
+\paragraph*{Solution to 36$\beta$.}
+$\left\{ pn + qm \mid p,q \in \mathbb{Z} \right\} = (m,n)\mathbb{Z}$ where
+$(m,n)$ is the greatest common divisor.
+
+\subsubsection{Problem 36$\delta$.}
+Show that $\mathbb{Z} \times \mathbb{Z}$ has subgroups not of the form
+$n\mathbb{Z} \times m\mathbb{Z}$.
+
+\paragraph*{Solution to 36$\delta$.}
+Each of the following are subgroups of $\mathbb{Z} \times \mathbb{Z}$:
+
+$$\{ (0, k) \mid k \in n\mathbb{Z} \} \mbox{ for any } n \in \mathbb{N}$$
+$$\{ (k, 0) \mid k \in n\mathbb{Z} \} \mbox{ for any } n \in \mathbb{N}$$
+$$\{ (nk, nl) \mid n \in \mathbb{Z} \} \mbox{ for any } k, l \in \mathbb{Z} $$
+\subsection{Article 37. Congruence modulo a subgroup}
+\subsubsection{Problem 37$\alpha$.}
+Show that all the left cosets of a group $G$ with respect to a subgroup $H$
+have the same number of elements; in other words, show that any two left cosets
+are in one-to-one correspondence.
+
+\paragraph*{Solution to 37$\alpha$.}
+We will show $f : xH \rightarrow yH$ defined by $f (xh) = yh$ is a one-to-one
+correspondence. The mapping $f$ is one-to-one since $xh_1, xh_2 \in xH$ such that
+$f(xh_1)= f(xh_2) $ implies $yh_1 = yh_2$, or $h_1 = h_2$. The mapping $f$ is onto
+since for every element $yh \in yH$ there exists an element in $xH$, namely $xh$,
+such that $f (xh) = yh$. Thus $f$ is a one-to-one correspondence.
+
+\subsubsection{Problem 37$\beta$.}
+Let $H$ be a subgroup of a group $G$. Define an equivalence relation on $G$
+which partitions $G$ into right cosets, that is, subsets of the form
+$$Hy = \{ x \in G \mid x = h y, h \in H \}. $$
+Prove that the number of right cosets is the same as the number of left cosets
+of $G$ with respect to $H$; that is, show that the set of right cosets and the
+set of left cosets are in one-to-one correspondence.
+
+\paragraph*{Solution to 37$\beta$.}
+Define a mapping $f : \{ xH \} \rightarrow \{Hy\}$ from the set of left cosets
+to the set of right cosets by $f (xH) = Hx^{-1}$. We will show that $f$ is a
+one-to-one correspondence. Suppose $f(xH) = f(yH)$ for two left cosets. Then
+$Hx^{-1} = Hy^{-1}$. This implies $hx^{-1} = y^{-1}$ for some $h \in H$ which
+in turn implies $x = yh$ (since $yhx^{-1} = e$). Thus $xH = yH$ and $f$ is
+one-to-one. Now suppose $f$ is not onto. Then there exists a $y$ such that
+$f(xH) \neq Hy$ for all $x \in G$. Since $f(y^{-1}H) = Hy$ if $y^{-1}$ were in $G$,
+this amounts to saying that $y$ has no inverse, a contradiction since $G$ is a
+group. Thus $f$ is a one-to-one correspondence.
+
+\subsubsection{Problem 37$\gamma$.}
+Show that when $G$ is abelian, every right coset is a left coset modulo $H$.
+
+\paragraph*{Solution to 37$\gamma$.}
+Pick a right coset $Hx$. Then every element in $Hx$ can be written $hx$ for
+some $h \in H$. Since $G$ is abelian, $hx = xh$ and thus $Hx = xH$.
+
+\subsubsection{Problem 37$\delta$.}
+Let an equivalence relation on $S_n$ be defined by $\pi ~ \tau$ if and only if
+$\pi n = \tau n$. Show that this equivalence relation is congruence modulo a
+subgroup of $S_n$.
+
+\paragraph*{Solution to 37$\delta$.}
+$H = \{ \pi \in S_n \mid \pi n = n \}$.
+
+\subsection{Article 38. Order of a group}
+\subsubsection{Problem 38$\alpha$.}
+
+\paragraph*{Solution to 38$\alpha$.}
+Suppose $HK$ is a subgroup of $G$. Pick $hk \in HK$. Since $HK$ is a subgroup,
+we have $(hk)^{-1} = k^{-1}h^{-1} \in HK$ so $k^{-1}h{-1} = h'k'$ for some
+$h' \in H$, $k' \in K$. But then $hk = ((hk)^{-1})^{-1} = (h'k')^{-1}$ and
+we have $hk \in KH$.
+
+Now pick $kh \in KH$. Since $K$ and $H$ are both subgroups, $k = k_1^{-1}$ for
+some $k_1 \in K$, $h = h_1^{-1} $ for some $h_1 \in H$, and
+$kh = k_1^{-1}h_1^{-1} = (h_1 k_1)^{-1} \in HK$ since $HK$ is a subgroup. This
+shows that $HK = KH$ if $HK$ is a subgroup.
+
+Now suppose that $HK = KH$. If $hk, h'k' \in HK$, then $(hk)(h'k') = h(kh')k'
+= $ ??.
+If $hk \in HK$, then $k^{-1}h^{-1} = (hk)^{-1} \in
+HK = KH$.
+
+\subsubsection{Problem 38$\gamma$.}
+Let $G$ be a nontrivial group with no proper subgroups except the trivial one.
+Show that $G$ is finite and that the order of $G$ is prime.
+
+\paragraph*{Solution to 38$\gamma$.}
+Suppose $G$ is a nontrivial group, has no proper subgroups except the trivial
+one, and is infinite. Pick $a \in G$, $a \neq e$. $H=\left\{ a^m \mid m \in
+\mathbb{Z} \right\}$ is a subgroup of $G$ and we must have $H=G$. However,
+$H' = \left\{ (a^2)^m \mid m \in \mathbb{Z}\right\}$ is also a subgroup and
+$H' \neq G$, a contradiction. Hence, $G$ must be finite.
+
+Now suppose that $o(G) = kn$ is not prime. Pick $a\in G$, $a\neq e$ and let
+$H = \left\{ a^m \mid m \in \mathbb{Z} \right\}$. We must have $H=G$. But then
+$\left<a^n\right> = \left\{ (a^n)^m \mid m \in \mathbb{Z} \right\}$ is a proper subgroup,
+a contradiction. Thus the order of $G$ must be prime.
+
+\subsection{Article 39. The index of a group}
+\subsubsection{Problem 39$\alpha$.}
+Let $H$ denote the subgroup of $S_n$ consisting of all elements $\pi \in S_n$
+such that $\pi n = n$. What is $[S_n:H]$?
+
+\paragraph*{Solution to 39$\alpha$.}
+Since $o(H) = (n-1)!$ and $o(S_n) = n!$ then $[S_n:H] = n! / (n-1)! = n$ (see
+\textbf{40}, Lagrange's Theorem).
+
+\subsection{Article 40}
+
+\subsection{Article 41. Order of an element}
+\subsubsection{Problem 41$\alpha$.}
+Determine the order of $a^m$ where $a\in G, o(a)=n$.
+
+\paragraph*{Solution to 41$\alpha$.}
+We know $a^n=e$. Write $m=kn+r$; then $a^m=a^{kn+r}=a^{kn}a^r=a^r$.
+$o(a^m)$ is the smallest $k \in \mathbb{N}$ such that $(a^m)^k=e$.
+Answer is $n /(n, m)$.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+n & m & $o(a^m)$ & lcm(n,m) & gcd(n,m) \\
+\hline
+12 & 1 & 12 & 12 & 1\\
+12 & 2 & 6 & 12 & 2 \\
+12 & 3 & 4 & 12 & 3 \\
+12 & 4 & 3 & 12 & 4 \\
+12 & 5 & 12 & 60 & 1 \\
+12 & 6 & 2 & 12 & 6 \\
+12 & 7 & 12 & 84 & 1 \\
+12 & 8 & 3 & 24 & 4 \\
+12 & 9 & 4 & 36 & 3 \\
+12 & 10 & 6 & 60 & 2 \\
+12 & 11 & 12 & 132 & 1 \\
+12 & 12 & 1 & 12 & 12 \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Problem 41$\beta$.}
+Let $a, b \in G$, $G$ abelian. Describe $o(ab)$ in terms of $o(a)$ and $o(b)$.
+
+\paragraph*{Solution to 41$\beta$.}
+$o(ab)$ is the smallest number $n$ such that $(ab)^n=e$. Since $G$ is abelian
+we have $e=(ab)^n=(ab)(ab)\cdots(ab)=(a\cdots a)(b\cdots b)=a^n b^n$.
+
+\subsubsection{Problem 41$\gamma$.}
+Show that $o(axa^{-1}) = o(x)$ for any elements $a$ and $x$ of a group $G$.
+
+\paragraph*{Solution to 41$\gamma$.}
+This follows from the relation $(axa^{-1})^k = ax^k a^{-1}$.
+
+\subsubsection{Problem 41$\delta$.}
+For any elements $a$ and $b$ of a group $G$, show that $o(ab) = o(ba)$.
+
+\paragraph*{Solution to 41$\delta$.}
+If $o(ab) = k$ then $(ab)^k = e$. This implies $(ba)^k = a^{-1}(ab)^k a = a^{-1}a = e$.
+
+\subsubsection{Problem 41$\epsilon$.}
+Let $G$ be an abelian group. Show that for any natural number $n$, the set $G_n
+= \{ x \in G \mid o(x) | n \}$ is a subgroup of $G$.
+
+\paragraph*{Solution to 41$\epsilon$.}
+If $x, y \in G_n$ then $o(x) | n$ and $o(y) | n$ imply $[o(x), o(y)] | n$ so
+$xy \in G_n$. Since $\left<x\right> = \left<x^{-1}\right>$, we have $o(x) | n$ implies $o(x^{-1}) | n$
+so $x^{-1} \in G_n$. Hence $G_n$ is a subgroup of $G$.
+
+\subsubsection{Problem 41$\zeta$.}
+Prove there can only be two groups of order 4 (up to isomorphism). Do the same
+for order 6.
+
+\paragraph*{Solution to 41$\zeta$.}
+Lagrange's theorem (see 40) implies that $o(a) | o(G)$. For $o(G)=4$, we must have
+$o(a)=1$, $o(a)=2$, or $o(a)=4$. $o(a)=1$ implies $a=a^1=e$. $o(a)=4$ implies
+$G$ is cyclic and $\left<a\right> = G$.
+
+For $o(G)=6$, we must have $o(a)=1$, $o(a)=2$, $o(a)=3$ or $o(a)=6$.
+
+\subsection{Article 42.}
+
+\subsection{Article 43.}
+
+\subsection{Article 44. Roots of unity}
+\subsubsection{Problem 44$\beta$.}
+Let $\zeta$ be a primitive $n$-th root of unit and let $\xi$ be a primitive
+$m$-th root of unity. What is the subgroup of the circle group $K$ generated
+by $\zeta$ and $\xi$?
+
+\paragraph*{Solution to 44$\beta$.}
+$e^{2\pi i / [m,n]}$ generates so $K_{[m,n]}$.
+
+\subsubsection{Problem 44$\gamma$.}
+Describe the group $K_n \cap K_m$.
+
+\paragraph*{Solution to 44$\gamma$.}
+$K_{(m,n)}$.
+
+
+\section{Conjugacy, normal subgroups, and quotient groups}
+
+
+\subsection{Article 45. Conjugacy}
+
+No exercises.
+
+\subsection{Article 46. Normal Subgroups}
+\subsubsection{Problem 46$\alpha$.}
+Show that a subgroup $H$ of a group $G$ is normal if and only if every left
+coset of $H$ is equal to some right coset of $H$.
+
+\paragraph*{Solution to 46$\alpha$.}
+Suppose $H$ is a normal subgroup of $G$. Then $H = a^{-1}Ha$ for any $a \in G$
+implies that $aH = Ha$ for any $a$ and therefore every left coset equals some
+right coset.
+
+Now suppose that every left coset equals a right coset. Pick $a \in G$. Then
+there exists $b \in G$ such that $aH = Hb$. Since $a \in Ha$, we get $a \in Hb$.
+So $Hb = Ha = aH$ and therefore $H = H^a$. Since $a$ was arbitrary, we have
+$H$ is a normal subgroup.
+
+\subsubsection{Problem 46$\gamma$.}
+Show that a subgroup of index 2 is always normal.
+
+\paragraph*{Solution to 46$\gamma$.}
+Let $H$ be a subgroup of index 2 of a group $G$. Then there are only two left
+cosets and two right cosets. Since $H$ is both a left coset and right coset,
+the other left coset is the same as the other right coset, namely $H^c$.
+
+\subsection{Article 47.}
+\subsubsection{Problem 47$\alpha$.}
+Describe the quotient group $\mathbb{Z} / m\mathbb{Z}$.
+
+\paragraph*{Solution to 47$\alpha$.}
+$[0]_m, [1]_m, \dots, [m-1]_m$.
+
+\subsubsection{Problem 47$\beta$.}
+$\mathbb{Z}$ is a normal subgroup of $\mathbb{R}$ (real numbers under addition).
+Show that the quotient group $\mathbb{R/Z}$ is isomorphic to the circle group
+$K$ (\textbf{31}).
+
+\paragraph*{Solution to 47$\beta$.}
+We have $x, y \in \mathbb{R}$ are in the same coset $x + \mathbb{Z}$ if
+$y = x + n$ for some $n \in \mathbb{Z}$. Since every $ y \in \mathbb{R} $ can
+be written $ y = x + n$ for some $ 0 \leq x < 1 $ and $ n \in \mathbb{Z}$, the
+quotient group $\mathbb{R/Z} = \{ x + \mathbb{Z} \mid 0 \leq x < 1 \}$.
+Define $\phi : \mathbb{R/Z} \rightarrow K$ as
+$\phi (x+\mathbb{Z}) = e^{2\pi i x}$. $\phi$ is onto, and since $ 0 \leq x < 1$,
+$\phi$ is also one-to-one.
+
+To show that $\mathbb{R/Z}$ and $K$ are isomorphic, we need to show that $\phi$
+preserves group products. We have
+$ \phi ((x+\mathbb{Z})(y+\mathbb{Z})) = \phi ((x+y)+\mathbb{Z}) = e^{2\pi i (x+y)}
+= e^{2\pi i x}e^{2 \pi i y} = \phi (x+\mathbb{Z}) \phi (y+\mathbb{Z})$ [here it
+is understood that $x+y$ "wraps" around the $[0,1)$ interval as needed].
+
+\subsection{Article 48. Normalizer of a subset}
+\subsubsection{Problem 48$\gamma$.}
+Show that $N(S^a) = N(S)^a$ for any subset $S$ of a group $G$.
+
+\paragraph*{Solution to 48$\gamma$.}
+$x \in N(S^a)$ if and only if $S^{ax} = S^a$ if and only if $S^{axa^{-1}} = S$
+if and only if $x \in N(S)^a$.
+
+($N(S^a) = \left\{ x \in G \mid S^{ax} = S^a \right\}$,
+$N(S)^a = \left\{ x \in G \mid axa^{-1} \in N(s) \right\}$)
+
+\subsection{Article 49.}
+\subsubsection{Problem 49$\alpha$.}
+Let $S$ be a subset of a group $G$, that has exactly two conjugates. Show that
+$G$ has a proper nontrivial normal subgroup.
+
+\paragraph*{Solution to 49$\alpha$.}
+By the theorem in \textbf{49}, $[G : N(S)] = 2$. By \textbf{46$\gamma$}, $N(S)$
+must be a normal subgroup of $G$. Since the index of $N(S)$ in $G$ is 2, $N(S)$ is a
+proper subgroup of $G$. To see that $N(S)$ is nontrivial, we only need to show
+that $o(G) > 2$ since $o(N(S)) = o(G)/2$ by Lagrange's theorem (\textbf{40}).
+$o(G) \neq 1$ because then there could not be exactly two conjugates. If we
+consider a group of order 2, we find that each element is only conjugate to
+itself, hence $o(G) \neq 2$.
+
+\subsubsection{Problem 49$\beta$.}
+Let $H$ be a proper subgroup of a finite group $G$. Show there is at least
+one element of $G$ not contained in $H$ or any of its conjugates.
+
+\paragraph*{Solution to 49$\beta$.}
+
+\subsection{Article 50. Center of a group}
+\subsubsection{Problem 50$\alpha$.}
+Show that the center of the symmetric group $S_n$ is trivial for $n > 2$.
+
+\paragraph*{Solution to 50$\alpha$.}
+See \textbf{79$\gamma$}.
+
+\subsection{Article 51. Conjugacy class equation}
+\subsubsection{Problem 51$\alpha$.}
+Divide the elements of the quaternion group $Q$ into conjugacy classes and
+verify the conjugacy class equation.
+
+\paragraph*{Solution to 51$\alpha$.}
+$Z_Q = \{ e, a^2 \}$, $C_a = \{ a, a^3 \}$, $C_b = \{ b, a^2 b \}$,
+$C_{ab} = \{ ab, a^3b \}$.
+
+\subsection{Article 52. Prime power groups}
+
+No exercises.
+
+
+\section{The Sylow theorems}
+
+
+\subsection{Article 53.}
+
+\subsection{Article 54. Orbits and Stabilizers}
+\subsubsection{Problem 54$\alpha$.}
+Let $H$ be a subgroup of a group $G$. Then $H$ acts on $G$ by the rule
+$h * x = hx$ for $h \in H$, $x \in G$. What is the orbit of $x \in G$ under
+this action? What is the stabilizer $H_x$?
+
+\paragraph*{Solution to 54$\alpha$.}
+The orbit of $x$ is the set $H * x = \{ y \in G \mid y = h * x \mbox{ for some }
+h \in H \} $. Since $ h * x = hx$, this is just the right coset $Hx$. The
+stabilizer is the set $ H_x = \{ h \in H \mid h*x = x \}$. Since $h*x=hx$ and
+the identity is unique, the only element in $H$ such that $hx =x$ is $e$, so
+$H_x = \{ e \}$.
+
+\subsubsection{Problem 54$\beta$.}
+
+\paragraph*{Solution to 54$\beta$.}
+Since $x$ and $y$ are in the same orbit, we can pick $h \in G$ such that
+$ y = h*x $.
+\subsection{Article 55.}
+
+No exercises.
+
+\subsection{Article 56.}
+
+No exercises.
+
+\subsection{Article 57.}
+
+No exercises.
+
+\subsection{Article 58.}
+
+No exercises.
+
+\subsection{Article 59.}
+
+
+\section{Group homomorphism and isomorphism}
+
+
+\subsection{Article 60. Group homomorphism}
+\subsubsection{Problem 60$\alpha$.}
+Show that a group homomorphism preserves identity elements and inverses.
+
+\paragraph*{Solution to 60$\alpha$.}
+Suppose $\phi$ is a group homomorphism. Then $\phi e = \phi (ee) = (\phi e) (\phi e)$
+which implies $\phi e = e'$. We then have $e' = \phi e = \phi (aa^{-1}) =
+(\phi a) (\phi a^{-1})$ which implies $\phi( a^{-1}) = (\phi a)^{-1}$.
+
+\subsubsection{Problem 60$\beta$.}
+Let $H$ be a normal subgroup of a group $G$. Show that the mapping $\phi : G
+\rightarrow G/H$ given by $\phi g = gH$ is a group homomorphism.
+
+\paragraph*{Solution to 60$\beta$.}
+We have $\phi (ab) = (ab)H = (aH)(bH) = (\phi a)(\phi b)$ (see \textbf{47}).
+
+\subsubsection{Problem 60$\gamma$.}
+Show that a group $G$ is abelian if and only if the mapping $\phi : G \rightarrow
+G$ given by $\phi g = g^{-1}$ is an endomorphism of $G$.
+
+\paragraph*{Solution to 60$\gamma$.}
+If $\phi$ is an endomorphism, we have $ab = \phi(b^{-1}a^{-1}) = \phi(b^{-1})\phi(a^{-1})
+= ba$ so $G$ is abelian. On the other hand, if $G$ is abelian, then $\phi (ab)
+= b^{-1}a^{-1} = a^{-1}b^{-1} = (\phi a)(\phi b)$ so that $\phi$ is an endomorphism.
+
+\subsubsection{Problem 60$\delta$.}
+Show that a group $G$ is abelian if and only if the mapping $\phi : G \rightarrow
+G$ given by $\phi g = g^2$ is an endomorphism of $G$.
+
+\paragraph*{Solution to 60$\delta$.}
+If $\phi$ is an endomorphism, then $abab = \phi(ab) = \phi a \phi b = aabb$ which
+implies $ab = ba$ and hence $G$ is abelian. On the other hand, suppose $G$ is
+abelian. Then $\phi (ab) = abab = aabb = (\phi a)(\phi b)$ which shows that $\phi$
+is an endomorphism.
+
+\subsubsection{Problem 60$\epsilon$.}
+Show that a group $G$ is abelian if and only if the mapping $\phi : G \times G \rightarrow
+G$ given by $\phi (a,b) = ab$ is a group homomorphism.
+
+\paragraph*{Solution to 60$\epsilon$.}
+If $\phi$ is a group homomorphism, then $acbd = \phi(ac,bd) = \phi((a,b)(c,d))
+= \phi(a,b)\phi(c,d) = abcd$ which implies $bc = cb$ for any elements $c,b \in G$
+so $G$ must be abelian. Now suppose $G$ is abelian. Then $\phi ((a,b)(c,d)) =
+\phi (ac,bd) = acbd = abcd = \phi(a,b)\phi(c,d)$, showing that $\phi$ must be
+a group homomorphism.
+
+\subsection{Article 61.}
+
+No exercises.
+
+\subsection{Article 62. Group isomorphism}
+\subsubsection{Problem 62$\alpha$.}
+Let $\mathbb{R}$ denote the group of all real numbers under addition and let
+$\mathbb{R}^+$ denote the group of all positive real numbers under multiplication.
+Show that the mapping $\phi : \mathbb{R} \rightarrow \mathbb{R}^+$ given by
+$\phi x = e^x$ is an isomorphism. What is the inverse of $\phi$?
+
+\paragraph*{Solution to 62$\alpha$.}
+$\phi$ is a one-to-one correspondence so we only need show that it preserves group products:
+$\phi(x+y) = e^{x+y} = e^x e^y = (\phi x)(\phi y)$. The inverse $\phi^{-1}: \mathbb{R}^+
+\rightarrow \mathbb{R}$ is given by $\phi^{-1} x = \ln x$.
+
+\subsubsection{Problem 62$\beta$.}
+Let $\phi : \mathbb{Z}_{16} \rightarrow \mathbb{Z'}_{17}$ be given by
+$\phi [k]_{16} = [3^k]_{17}$. Show that $\phi$ is an isomorphism.
+
+\paragraph*{Solution to 62$\beta$.}
+$\phi$ is a homomorphism because $\phi([k]_{16} + [l]_{16}) = \phi([k+l]_{16}) = [3^{k+l}]_{17}
+= [3^k]_{17}[3^l]_{17} = (\phi [k]_{16})(\phi[l]_{16})$. To see that $\phi$ is an isomorphism,
+we must show that $\phi$ is a one-to-one correspondence. ??
+
+\subsubsection{Problem 62$\epsilon$.}
+Let $G$ denote the group of real numbers between -1 and 1 under the operation
+$x y = (x+y)/(1+xy)$. Show that $G$ is isomorphic to the group of real numbers
+$\mathbb{R}$ under addition.
+
+\paragraph*{Solution to 62$\epsilon$.}
+Consider $\phi x = (1-e^{-x}) / (1 + e^{-x})$. $\phi$ is a one-to-one correspondence
+$\phi : \mathbb{R} \rightarrow G$. $\phi$ also preserves group products:
+\begin{eqnarray*}
+\phi(x)\phi(y) & = & \frac{(\frac{1-e^{-x}}{1+e^{-x}}) + (\frac{1-e^{-y}}{1+e^{-y}})}
+{1 + (\frac{1-e^{-x}}{1+e^{-x}})(\frac{1-e^{-y}}{1+e^{-y}})} \\
+& = & \frac{(1-e^{-x})(1+e^{-y}) + (1-e^{-y})(1+e^{-x})}
+{(1+e^{-x})(1+e^{-y})+(1-e^{-x})(1-e^{-y})} \\
+& = & \frac{2(1-e^{-x}e^{-y})}{2(1 + e^{-x}e^{-y})} \\
+& = & \frac{1 - e^{-(x+y)}}{1+e^{-(x+y)}} \\
+& = & \phi (x+y)
+\end{eqnarray*}
+Hence $\phi$ is an isomorphism and $\mathbb{R}$ and $G$ are isomorphic.
+
+\subsection{Article 63}
+
+No exercises.
+
+\subsection{Article 64.}
+
+\subsubsection{Problem 64$\alpha$.}
+Show that the set $\mathcal{A}(G)$ of all automorphisms of a group $G$
+is a group under composition and that the set $\mathcal{I}(G)$ of inner
+automorphisms of a group $G$ is a normal subgroup of $\mathcal{A}(G)$.
+
+\paragraph*{Solution to 64$\alpha$.}
+By \textbf{16$\alpha$}, $\mathcal{A}(G)$ is a group.
+
+Pick $\phi \in \mathcal{A}(G)$. For any $\alpha_a \in \mathcal{I}(G)$,
+we have
+$$ (\phi^{-1} \alpha_a \phi)(g) = \phi^{-1}(a^{-1}\phi(g)a)
+= \phi^{-1}(a)^{-1} g \phi^{-1}(a) $$
+so that $\phi^{-1} \alpha_a \phi = \alpha_{\phi^{-1}(a)} \in \mathcal{I}(G)$.
+This shows $\mathcal{I}(G) \subset \mathcal{I}(G)^\phi$.
+\subsection{Article 65.}
+
+\subsection{Article 66.}
+
+\subsection{Article 67. Factoring homomorphisms}
+\subsubsection{Problem 67$\alpha$.}
+Let $\mathbb{R}$ denote the group of real numbers under addition and
+$\mathbb{C}^*$ the group of nonzero complex numbers under multiplication.
+Decompose the homomorphism $ \phi : \mathbb{R} \rightarrow \mathbb{C}^*$
+given by $\phi x = e^{2 \pi i x}$ in the manner of the proposition above.
+
+\paragraph*{Solution to 67$\alpha$.}
+We have $\mathbb{R} / \mbox{Ker} \phi = \mathbb{Z}$. $\gamma : \mathbb{R} \rightarrow
+\mathbb{R} / \mbox{Ker } \phi $ can be given by $ \gamma x = x - [x] $. We also
+have $ \mbox{Im } \phi = \left\{ z \mid |z| = 1\right\}$, the unit circle. Then
+$\beta : \mathbb{R} / \mbox{Ker } \phi \rightarrow \mbox{Im } \phi $ can be
+given by $ \beta (\gamma x) = e^{2\pi i (\gamma x)} = \phi (\gamma x)$.
+Lastly, $\alpha : \mbox{Im } \phi \rightarrow \mathbb{C}^* $ is given by
+$ \alpha ( \beta ( \gamma x ) ) = \beta (\gamma x) $.
+
+\subsection{Article 68. The First Isomorphism Theorem}
+
+No exercises.
+
+\subsection{Article 69. The Second Isomorphism Theorem}
+
+No exercises.
+
+\subsection{Article 70. The Third Isomorphism Theorem}
+
+No exercises.
+
+
+\section{Normal and composition series}
+
+
+\subsection{Article 71.}
+
+No exercises.
+\subsection{Article 72.}
+
+No exercises.
+\subsection{Article 73.}
+
+\subsection{Article 74.}
+
+\subsubsection{Problem 74$\beta$.}
+Construct composition series for the groups $\mathbb{Z}_8$, $D_4$, and $Q$.
+
+\paragraph*{Solution to 74$\beta$.}
+For $\mathbb{Z}_8$: $\{e\} = \{[0]_8\}$, $\{[0]_8, [4]_8\}$, $\{[0]_8, [2]_8, [4]_8, [6]_8\}$,
+$\{[0]_8, [1]_8, [2]_8, [3]_8, [4]_8, [5]_8, [6]_8, [7]_8\}$ = $\mathbb{Z}_8$.
+
+For $D_4$: $\{e\}$, $\{e, \alpha^2\}$, $\{e, \alpha, \alpha^2, \alpha^3\}$, $D_4$.
+
+For $Q$: $\{e\}$, $\{e, a^2\}$, $\{e, a, a^2, a^3\}$, $Q$.
+\subsection{Article 75.}
+
+
+
+\section{The Symmetric groups}
+
+
+
+\subsection{Article 76.}
+
+No exercises.
+\subsection{Article 77.}
+
+\subsection{Article 78.}
+
+\subsection{Article 79. Cyclic permutations}
+\subsubsection{Problem 79$\alpha$.}
+Compute the number of distinct $k$-cycles in $S_n$.
+
+\paragraph*{Solution to 79$\alpha$.}
+There are $\binom{n}{k} = \frac{n!}{k!(n-k)!}$
+ways to choose $k$ elements from $S_n$. To avoid identical cycles written in
+different ways, fix the first element of the cycle as the smallest element among
+the $a_k$. Then there are $(k-1)!$ ways to arrange the $a_k$ to form distinct
+cycles. Putting this together, we get $ \frac{n!}{k(n-k)!}$ $k$-cycles.
+
+\subsubsection{Problem 79$\gamma$.}
+Prove that disjoint cyclic permutations commute.
+
+\paragraph*{Solution to 79$\gamma$.}
+Suppose $\pi = (a_1, a_2, \dots, a_k)$ and $\tau = (b_1, b_2, \dots, b_l)$ and
+$\{ a_1, a_2, \dots, a_k \} \cap \{ b_1, b_2, \dots, b_l \} = \emptyset$.
+For $ i \in \{ a_1, a_2, \dots, a_k \} $, $(\pi \tau)(i) = \tau(\pi (i)) =
+\pi(i) = \pi(\tau(i)) = (\tau \pi)(i)$. A similar relation holds for $ i \in
+\{ b_1, b_2, \dots, b_l \}$. For $i \in N_n - \{ a_1, a_2, \dots, a_k \} \cup
+\{ b_1, b_2, \dots, b_l \}$ we have $(\pi \tau)(i) = i = (\tau \pi)(i)$. Thus
+$\pi \tau = \tau \pi$.
+
+\subsubsection{Problem 79$\delta$.}
+Show that $S_n$ contains $\binom{n}{k}$
+subgroups isomorphic to $S_k \times S_{n-k}$, all of which are conjugates.
+
+\paragraph*{Solution to 79$\delta$.}
+Let $a_1, a_2, \dots , a_k \in \mathbb{N}_n$ be distinct integers. There are
+$n-k$ integers in $\mathbb{N}_n - \left\{a_1, \dots , a_k\right\}$; call these
+$b_1, b_2, \dots , b_{n-k}$. There are $\binom{n}{k}$ ways to make this selection
+and each choice gives rise to a subgroup. Each element in the subgroup can be
+written as
+$$
+h_{\pi, \sigma} =
+\left(
+\begin{array}{cccccccc}
+a_1        & a_2        & \dots & a_k        & b_1           & b_2           & \dots & b_{n-k} \\
+a_{\pi(1)} & a_{\pi(2)} & \dots & a_{\pi(k)} & b_{\sigma(1)} & b_{\sigma(2)} & \dots & b_{\sigma(n-k)}
+\end{array}
+\right)
+$$
+for some $(\pi, \sigma) \in S_k \times S_{n-k}$
+
+\subsection{Article 80.}
+\subsubsection{Problem 80$\gamma$.}
+Show that $S_n$ is generated by the transpositions $$(1,2), (2,3), \dots, (n-1,n)$$.
+
+\paragraph*{Solution to 80$\gamma$.}
+$(1,2)(2,3)(1,2) = (1,3)$.
+$(1,2)(2,3)(3,4)(2,3)(1,2) = (1,4)$.
+In general, $$(1,2)(2,3) \cdots (k-2,k-1)(k-1,k)(k-2,k-1) \cdots (2,3)(1,2) = (1,k).$$
+In general, for $l < k$,
+$$(l,l+1)(l+1,l+2) \cdots (k-2,k-1)(k-1,k)(k-2,k-1) \cdots (l+1,l+2)(l,l+1) = (l,k).$$
+So $(1,2), (2,3), \dots, (n-1,n)$ can generate any tranposition. By the corollary
+in \textbf{80}, this shows that $(1,2), (2,3), \dots, (n-1,n)$ generates $S_n$.
+
+\subsubsection{Problem 80$\delta$.}
+Show that $S_n$ is generated by the cycles $(1,2)$ and $(1,2, \dots, n)$.
+
+\paragraph*{Solution to 80$\delta$.}
+We only need to show that $(1,2)$ and $(1,2, \dots, n)$ generate
+$(1,2), (2,3), \dots, (n-1,n)$, then apply \textbf{80$\gamma$}.
+
+Let $\pi = (1,2,\dots,n)$ and $\tau =(1,2)$. Note that $\pi$ is cyclic of order
+$n$ so $\pi^{-1} = \pi^{n-1}$, $\pi^{-2} = \pi^{n-2}$, etc.
+By direct calculation, $\pi^{-1}\tau\pi = (2,3)$. We can also see that
+$\pi^{-2}\tau\pi^2 = (3,4)$. In general, $$\pi^{-k}\tau\pi^k = (k+1,k+2)$$ for
+$k \in \mathbb{N}_{n-2}$. This shows that $(1,2)$ and $(1,2, \dots, n)$ generate
+$(1,2), (2,3), \dots, (n-1,n)$.
+\subsection{Article 81. Even and Odd Permutations}
+\subsubsection{Problem 81$\alpha$.}
+Determine the sign of a $k$-cycle in terms of $k$.
+
+\paragraph*{Solution to 81$\alpha$.}
+$(-1)^{k+1}$. 2-cycles are odd, 3-cycles are even, 4-cycles are odd, etc.
+
+\subsection{Article 82.}
+
+\subsection{Article 83.}
+
+\subsection{Article 84.}
+
+\subsection{Article 85.}
+
+\subsection{Article 86.}
+
+No exercises.
+

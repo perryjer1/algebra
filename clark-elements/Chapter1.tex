@@ -1,0 +1,237 @@
+\chapter{Set Theory}
+
+\section{The notation and terminology of set theory}
+
+
+\subsection{Article 1}
+
+No exercises.
+
+\subsection{Article 2}
+
+No exercises.
+
+\subsection{Article 3}
+
+No exercises.
+
+\subsection{Article 4}
+
+No exercises.
+
+\subsection{Article 5}
+
+No exercises.
+
+\subsection{Article 6}
+
+No exercises.
+
+\subsection{Article 7}
+
+No exercises.
+
+\subsection{Article 8. Set difference}
+\subsubsection{Problem 8$\alpha$.}
+The \textit{symmetric difference} of two sets $A$ and $B$ is the set
+$$ A*B = (A-B) \cup (B-A) $$
+Show that $A*B = (A \cup B) - (A \cap B)$. Show that $A*B = \emptyset$ if and
+only if $ A = B$. Prove that the symmetric difference is an associative
+operation on sets, that is to say, $A*(B*C) = (A*B)*C$ for any three sets
+$A$, $B$, and $C$.
+
+\paragraph*{Solution to 8$\alpha$.}
+Suppose $ x \in (A-B) \cup (B-A) $. Then either $x \in A$ and $ x \notin B$, or
+$ x \notin A$ and $x \in B$. In either case, $x \in A \cup B$ but $x$ cannot
+be in $A$ and $B$, i.e. $ x \notin A \cap B$; thus $x \in (A \cup B) - (A \cap B)$.
+
+Suppose $x \in (A \cup B) - (A \cap B)$. Then $ x \in (A \cup B)$ and $x \notin
+A \cap B$, so $ x \in A $ and $x \notin A \cap B$, or $ x \in B $ and $x \notin
+A \cap B$. This gives $ x \in A $ and $ x \notin B $ or $x \in B $ and $x \notin
+A $, which is the same as $x \in (A-B) \cup (B -A)$. Hence $(A-B) \cup (B-A) =
+(A \cup B) - (A \cap B)$.
+
+\paragraph{}
+Suppose $A*B = \emptyset$. Then $(A-B) \cup (B-A) = \emptyset$, and this implies
+$ A-B = \emptyset$ and $(B-A) = \emptyset$. Thus $ A \subset B $ and $ B \subset A$
+which is the same as saying $A = B$.
+
+Suppose $A = B$. Then $A - B = \emptyset$ and $B - A = \emptyset$, so that
+$A*B = (A-B) \cup (B-A) = \emptyset$.
+
+\paragraph{}
+$A*(B*C) = (A-[(B-C) \cup (C-B)]) \cup ([(B-C) \cup (C-B)]-A)$. ??
+
+\subsection{Article 9}
+
+
+\section{Mappings}
+
+
+\subsection{Article 10}
+
+\subsection{Article 11}
+
+No exercises.
+
+\subsection{Article 12. One-to-one mappings}
+
+\subsection{Article 13. One-to-one correspondences}
+\subsubsection{Problem 13$\alpha$.}
+Let $\mathbb{N}_k = \{ 1, 2, \dots, k \}$. Define a one-to-one correspondence
+from $\mathbb{N}_k \times \mathbb{N}_l$ to $\mathbb{N}_{kl}$.
+
+\paragraph*{Solution to 13$\alpha$.}
+$f(i,j) = i + (j-1)k$, with inverse $f^{-1}(i) = (((i-1) \mod k)+1,
+[(i+1)/k])$.
+
+\subsubsection{Problem 13$\beta$.}
+If $S$ and $T$ denote sets, define a one-to-one correspondence from $S \times T$
+and $T \times S$.
+
+\paragraph*{Solution to 13$\beta$.}
+$f (s, t) = (t, s)$ with inverse $f^{-1}(t, s) = (s,t)$.
+
+\subsubsection{Problem 13$\gamma$.}
+If $R$, $S$, and $T$ denote sets, define a one-to-one correspondence from
+$(R \times S) \times T$ to $R \times (S \times T)$.
+
+\paragraph*{Solution to 13$\gamma$.}
+$f( (r,s), t) = (r, (s, t))$ with inverse $f^{-1}(r, (s,t)) = ((r,s), t)$.
+
+\subsection{Article 14}
+
+\subsection{Article 15}
+
+\subsection{Article 16}
+
+
+\section{Equivalence relations}
+
+
+\subsection{Article 17. Equivalence relations}
+\subsubsection{Problem 17$\alpha$.}
+Let $X$ be partitioned into disjoint subsets, $X_1, X_2, \dots , X_n$. Define
+and equivalence relation $R$ on $X$ for which $X/R = \{X_1, X_2, \dots , X_n \}$.
+
+\paragraph*{Solution to 17$\alpha$.}
+$R = \{ (x,y) \mid x, y \in X_i \mbox{ for some } i \}$. Clearly, $(x,x) \in R$ and
+$(x,y) \in R$ implies $(y,x) \in R$. If $(x,y) \in R$ and $(y,z) \in R$, then
+$x,y,z \in X_i$ for some $i$ (and only one $i$ since the $X_i$ are disjoint) so that
+$(x,z) \in R$. This shows that $R$ is an equivalence relation.
+
+To see that $X/R = \{X_1, X_2, \dots , X_n\}$, we note that $(x,y) \in R$ if and
+only if $x$ and $y$ are in the same subset. Thus the equivalence classes of $R$
+are just the subsets $\{X_i\}_{i=1}^{n}$.
+
+\subsection{Article 18}
+
+\subsection{Article 19}
+
+
+\section{Properties of natural numbers}
+
+
+\subsection{Article 20. Natural Numbers}
+\subsubsection{Problem 20$\alpha$.}
+Prove the alternate form of the principle of mathematical induction: \textit{If
+$S$ is a subset of $\mathbb{N}$ such that $\mathbb{N}_1 \subset S$ and
+$\mathbb{N}_k \subset S$ implies $\mathbb{N}_{k+1} \subset S$, then $S = \mathbb{N}$.}
+
+\paragraph*{Solution to 20$\alpha$.}
+Suppose that $ S \subset \mathbb{N}$, $ \mathbb{N}_1 \subset \mathbb{N} $,
+$\mathbb{N}_k \subset S $ implies $\mathbb{N}_{k+1} \subset S $, and $ \mathbb{N} - S
+\neq \emptyset $. Then $ \mathbb{N} - S $ has a smallest element, call it $k$.
+Since $\mathbb{N}_1 \subset S$  we must have $k > 1$.
+We also have $ \mathbb{N}_{k-1} \subset S $, otherwise there exists a $k' < k$ such
+that $k' \in \mathbb{N} - S$. This implies $ \mathbb{N}_k \subset S$ which
+implies $ k \in S $, hence $ k \notin \mathbb{N} - S$, a contradiction.
+
+\subsubsection{Problem 20$\gamma$.}
+Prove by induction the binomial theorem:
+$$ (x+y)^n = \sum_{k=0}^n x^k y^{n-k} {{n}\choose{k}} $$
+
+\paragraph*{Solution to 20$\gamma$.}
+For $n = 1$, $(x+y)^1 = \sum_{k=0}^1 x^k y^{1-k} {{1}\choose{k}} = x+y$.
+Now suppose the theorem is true for all natural numbers up to $n$.
+For $n+1$,
+\begin{eqnarray*}
+(x+y)^{n+1} &=& (x+y)(x+y)^n \\
+&=& (x+y) \sum_{k=0}^n x^k y^{n-k} {{n}\choose{k}} \\
+&=& \sum_{k=0}^n x^{k+1} y^{n-k} {{n}\choose{k}} + \sum_{k=0}^n x^k y^{n-k+1} {{n}\choose{k}} \\
+&=& \sum_{k=1}^{n+1} x^k y^{n-k+1} {{n}\choose{k-1}} + \sum_{k=0}^n x^k y^{n-k+1} {{n}\choose{k}} \\
+&=& x^{n+1} + \left( \sum_{k=1}^n x^k y^{n-k+1} \left[ {{n}\choose{k-1}} + {{n}\choose{k}} \right] \right) + y^{n+1} \\
+&=& x^{n+1} + \left( \sum_{k=1}^n x^k y^{n-k+1} {{n+1}\choose{k}} \right) + y^{n+1} \\
+&=& \sum_{k=0}^{n+1} x^k y^{n+1-k} {{n+1}\choose{k}} \\
+&=& \sum_{k=0}^m x^k y^{m-k} {{m}\choose{k}}
+\end{eqnarray*}
+which shows that the theorem is true for $m = n+1$.
+\subsection{Article 21}
+
+\subsection{Article 22. Division}
+\subsubsection{Problem 22$\alpha$.}
+Show that every natural number other than 1 is divisible by some prime.
+
+\paragraph*{Solution to 22$\alpha$.}
+By induction, starting with $ n = 2 $. Clearly, $2$ is divisible by some prime,
+namely itself. Now, suppose the theorem is true for $ k \leq n - 1 $. If $n$ is
+prime, we have $n \mid n$. If $n$ is not prime then there exists some number
+$ a $ such that $ 1 < a < n $ and $ a \mid n $, or, in other words, $ n = ma$
+for some $m \in \mathbb{N}$. By our induction hypothesis,
+$ p \mid a $ for some prime $p$, or $ a = qp $ for some
+$ q \in \mathbb{N} $. Hence $ n = ma = (mq)p $ so $ p \mid n $.
+
+\subsection{Article 23. GCD's and LCM's}
+\subsubsection{Problem 23$\alpha$.}
+Prove that $ d \in \mathbb{N} $ is the greatest common divisor of $ a, b \in
+\mathbb{N} $ if and only if
+\begin{enumerate}
+\item $ d \mid a $ and $ d \mid b $,
+\item $ c \mid a $ and $ c \mid b $ imply $ c \mid d $.
+\end{enumerate}
+
+\paragraph*{Solution to 23$\alpha$.}
+Suppose the two conditions hold. The first shows that $ d $ is a common divisor
+of $ a $ and $ b $. The second shows that among all common divors,
+$ d $ is the largest since $ c \mid d $ implies $ c \leq d $. Hence $ d $ is
+the greatest common divisor.
+
+Now suppose $ d = (a, b) $. By definition, we have $ d \mid a $ and $ d \mid b $
+so that condition 1 holds.
+We can write $ d = ua + vb $ for some $ u, v \in \mathbb{N} $ by the theorem
+in article 23. For some $ c \in \mathbb{N} $, if $ c \mid a $ and $ c \mid b $
+then $ c \mid ua + vb $, or what is the same thing, $ c \mid d $. Hence condition
+2 holds.
+
+\subsubsection{Theorem needed for 23$\beta$.}
+If $ a \mid b + c $ and $ a \mid b $, then $ a \mid c $.
+
+\paragraph*{Proof of Theorem needed for 23$\beta$.}
+Since $ a \mid b + c$, we can write $ a = q_1 (b +c) = q_1 b + q_1 c$.
+
+???
+
+Maybe it is not needed afterall, but it could be used...
+
+\subsubsection{Problem 23$\beta$.}
+Prove that $ m \equiv m' \mod n $ implies $ (m,n) = (m', n)$.
+
+\paragraph*{Solution to 23$\beta$.}
+There exists a $ k \in \mathbb{Z} $ such that $m' = m + kn$. Since $ (m,n) \mid
+m $ and $ (m,n) \mid n$, we have $(m,n) \mid m + kn$ hence $(m,n) \mid m'$.
+Thus $(m,n)$ is a common divisor of $m'$ and $n$. Now consider some common
+divisor $a$ of $m'$ and $n$. Since $m = m' - kn$, we have $a \mid m $ as well.
+Therefore $ a < (m,n) $ and we have $ (m,n) = (m',n) $.
+
+\subsection{Article 24. The Fundamental Theorem of Arithmetic}
+\subsubsection{Problem 24$\beta$.}
+Compute the number of divisors of $ n = p_1^{v_1} p_2^{v_2} \cdots p_k^{v_k} $.
+
+\paragraph*{Solution to 24$\beta$.}
+Any number that divides $ n $ will be of the form $ p_1^{\eta_1} p_2^{\eta_2}
+\cdots p_k^{\eta_k} $, where $ 0 \leq \eta_1 \leq v_1, \dots, 0 \leq \eta_k \leq v_k $.
+For the $ p_1 $ then, we have $ v_1 + 1 $ choices of exponent, for $ p_2 $ we have
+$ v_2 + 1 $, etc. This gives $ \prod_1^k (v_i + 1) $ factors.
+
+\subsection{Article 25}
+

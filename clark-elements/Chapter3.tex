@@ -1,0 +1,595 @@
+\chapter{Field Theory}
+
+\section{Definition and examples of field structure}
+
+
+\subsection{Article 87. Fields}
+
+\subsubsection{Problem 87$\alpha$.}
+Show that $0a = 0 = a0$ for any element $a$ of a field $F$.
+
+\paragraph*{Solution to 87$\alpha$.}
+$a0 = a (0 + 0) = a0 + a0$ which implies $a0 = 0$. Same thing holds for $0a$.
+
+\subsubsection{Problem 87$\beta$.}
+Show that $(-1)a = -a$ for any element $a$ of a field $F$.
+
+\paragraph*{Solution to 87$\beta$.}
+$0 = a(1-1) = a + (-1)a$ which implies that the inverse of $a$, $-a$, is
+$(-1)a$.
+
+\subsubsection{Problem 87$\gamma$.}
+Let $a$ and $b$ be elements of a field $F$ such that $ab = 0$. Show that
+$a=0$ or $b=0$.
+
+\paragraph*{Solution to 87$\gamma$.}
+Suppose $ab = 0$ but $a \neq 0$ and $b \neq 0$. Then we have $ a \in F^*$ and
+$ b \in F^*$ so that their product $ab \in F^*$, a contradiction.
+
+\subsubsection{Problem 87$\epsilon$.}
+Construct a field with four elements.
+
+\paragraph*{Solution to 87$\epsilon$.}
+The four elements will be $0$, $1$, $a$, and $b$. First the addition table:
+
+\begin{center}
+\begin{tabular}{c|cccc}
+    & $0$ & $1$ & $a$ & $b$ \\
+\hline
+$0$ & $0$ & $1$ & $a$ & $b$ \\
+$1$ & $1$ & $0$ & $b$ & $a$ \\
+$a$ & $a$ & $b$ & $0$ & $1$ \\
+$b$ & $b$ & $a$ & $1$ & $0$
+\end{tabular}
+\end{center}
+
+Next the multiplication table:
+
+\begin{center}
+\begin{tabular}{c|cccc}
+    & $0$ & $1$ & $a$ & $b$ \\
+\hline
+$0$ & $0$ & $0$ & $0$ & $0$ \\
+$1$ & $0$ & $1$ & $a$ & $b$ \\
+$a$ & $0$ & $a$ & $b$ & $1$ \\
+$b$ & $0$ & $b$ & $1$ & $a$
+\end{tabular}
+\end{center}
+
+For example, $a(a+b) = a1 = a = b+1 = aa + ab$.
+\subsection{Article 88. Subfields}
+\subsubsection{Problem 88$\beta$.}
+Show that the set
+$$\mathbb{Q}(\sqrt{2}) = \{ z \in \mathbb{C} \mid z = a + b \sqrt{2} ;
+a, b \in \mathbb{Q} \} $$
+is a number field.
+
+\paragraph{Solution to 88$\beta$.}
+This is seen by considering the following four relations:
+$ z_1 + z_2 = (a_1 + a_2) + (b_1 + b_2)\sqrt{2} \in \mathbb{Q}(\sqrt{2}) $,
+$ -z = -a - b\sqrt{2} \in \mathbb{Q}(\sqrt{2}) $,
+$ z_1 z_2 = (a_1 a_2 + 2 b_1 b_2) + (a_1 b_2 + a_2 b_1) \sqrt{2} \in \mathbb{Q}(\sqrt{2}) $,
+and $ 1/z = 1 / (a + b\sqrt{2}) = a/(a^2 - 2 b^2) - (b/(a^2 - 2 b^2))\sqrt{2} \in \mathbb{Q}(\sqrt{2}) $.
+
+\subsubsection{Problem 88$\delta$.}
+Prove that every number field contains $\mathbb{Q}$.
+
+\paragraph{Solution to 88$\delta$.}
+Let F be a number field. By definition, $ F \subset \mathbb{C} $.. Since $F$ is
+a subfield, we have $ 0 \in F $ and $ 1 \in F $. Also, $F$ contains inverses
+so $ -1 \in F $. $F$ is closed under addition, so that $ 1 + 1 = 2 \in F $,
+$(-1) + (-1) = -2 \in F$, etc., and therefore (by induction) $\mathbb{Z} \subset F$.
+Finally, $F$ is also closed under division so that $m/n \in F$ for $m, n \in
+\mathbb{Z}$, or what is the same thing, $ \mathbb{Q} \subset F $.
+
+\subsection{Article 89. Characteristic of a field}
+
+\subsubsection{Problem 89$\alpha$.}
+Show that $\mbox{char } F = n$ implies that $na=0$ for all $a \in F$, and that
+$n$ is prime.
+
+\paragraph*{Solution to 89$\alpha$.}
+Suppose $\mbox{char } F = n$. Then there exists $a \in F^*$ such that
+$na = (a + a + \dots (n) \dots + a) = 0$. Pick $b \in F^*$. We have
+$0 = (na)b = (\sum_n a)b = \sum_n ab = a \sum_n b = a(nb)$. Since $a \neq 0$, this
+implies $nb = 0$.
+
+Suppose $n = km$, i.e. $n$ is not prime. Then $(km)a = 0$ which implies $ka = 0$
+or $ma = 0$, contradicting the minimality of $n$. Thus $n$ must be prime.
+
+\subsubsection{Problem 89$\beta$.}
+Show that a field $F$ has characteristic $0$ if and only if ther exists a
+one-to-one field homomorphism $\phi : \mathbb{Q} \rightarrow F$; show also
+that $\mbox{char } F = p$ if and only if there exists a one-to-one field
+homomorphism $\phi : \mathbb{Z}_p \rightarrow F$.
+
+\paragraph*{Solution to 89$\beta$.}
+Suppose $\mbox{char } F = 0$. ??
+
+Suppose there is a one-to-one field homomorphism $\phi : \mathbb{Q} \rightarrow F$.
+Pick $a \in \mathbb{Q}^*$. Since $\phi$ is one-to-one and $\phi (0_Q) = 0_F$, we
+have $b = \phi a \neq 0_F$ for some $b \in F^*$. Since $na \neq 0_Q$ for any
+$n \in \mathbb{N}$, $\phi (na) \neq 0_F$ for any $n \in \mathbb{N}$ and thus
+$\mbox{char } F = 0$.
+
+Now suppose $\mbox{char } F = p$. ??
+
+Suppose there is a one-to-one field homomorphism $\phi : \mathbb{Z}_p \rightarrow F$.
+??
+
+\subsubsection{Problem 89$\gamma$.}
+Show that for a field $F$ of nonzero characteristic $p$ the mapping
+$\phi : F \rightarrow F$ given by $\phi a = a^p$ is a field homomorphism. Show
+that $\phi$ is an isomorphism when $F$ is finite.
+
+\paragraph*{Solution to 89$\gamma$.}
+We have $\phi(ab) = (ab)^p = a^p b^p = (\phi a)(\phi b)$. We also have
+$\phi(a+b) = (a+b)^p = \sum_{k=0}^p \binom{p}{k} a^{p-k} b^{k}$.
+Since $p \mid \binom{p}{k}$ for $1 \leq k \leq p-1$, and $pa = pb = 0$, this
+sum collapses to $a^p + b^p$; thus $\phi(a+b) = \phi a + \phi b$.
+
+When $F$ is finite ?? $\phi^{-1} = a^{-p}$.
+
+
+\section{Vector spaces, bases, and dimension}
+
+
+\subsection{Article 90.}
+
+No exercises.
+\subsection{Article 91.}
+
+No exercises.
+\subsection{Article 92. Spanning sets; subspaces}
+
+\subsubsection{Problem 92$\gamma$.}
+Show that the sets
+$$ \mbox{Ker } T = \{ \alpha \in E \mid T\alpha = 0 \} \mbox{ and }
+\mbox{Im } T = \{ \alpha ' \in E' \mid \alpha ' = T\alpha, \alpha \in E \}$$
+are subspaces of $E$ and $E'$, respectively.
+
+\paragraph*{Solution to 92$\gamma$.}
+Let $\alpha, \beta \in \mbox{Ker } T$ and $c, d \in F$. Then $T(c\alpha + d\beta)
+= c T \alpha + d T \beta = 0$, so $c\alpha + d\beta \in \mbox{Ker } T$ and thus
+$\mbox{Ker } T$ is a subspace of $E$.
+
+Let $\alpha ', \beta ' \in \mbox{Im } T$ and $c, d \in F$. Let $\alpha \in E$ be
+such that $T\alpha = \alpha '$ and $\beta \in E$ such that $T\beta = \beta '$.
+Then $T(c \alpha + d \beta) = c T \alpha + d T \beta = c \alpha ' + d \beta '$
+and therefore $c \alpha ' + d \beta ' \in \mbox{Im } T$ so that $\mbox{Im } T$ is
+a subspace of $E'$.
+\subsection{Article 93.}
+
+No exercises.
+\subsection{Article 94.}
+
+No exercises.
+\subsection{Article 95.}
+
+
+\section{Extension fields}
+
+
+\subsection{Article 96. Extension fields}
+
+\subsubsection{Problem 96$\beta$.}
+Show that $\left[ \mathbb{C} : \mathbb{R} \right] = 2$.
+
+\paragraph{Solution to 96$\beta$.}
+$\left[ \mathbb{C} : \mathbb{R} \right]$ denotes the number of elements in a
+basis for $\mathbb{C} $. over $\mathbb{R}$. We claim that $\left\{ 1, i \right\}$
+is a basis for $\mathbb{C}$.. Every element in $\mathbb{C}$ can be written as
+$a + bi$ for some $a, b \in \mathbb{R}$, so we see that $\left\{ 1, i \right\}$
+spans $\mathbb{C}$. Also, there is no linear combination $a + bi = 0$ except the
+trivial one, so $\{ 1, i \}$ is linearly independent. Hence $\{ 1, i \}$ is a
+basis.
+
+\subsection{Article 97.}
+
+No exercises.
+
+
+\section{Polynomials}
+
+
+\subsection{Article 98. Polynomials}
+
+\subsubsection{Problem 98$\alpha$.}
+Show that $F(x)$ is a field under the operations defined by
+$$\frac{p}{q} + \frac{r}{s} = \frac{ps+qr}{qs}$$
+$$\left(\frac{p}{q}\right)\left(\frac{r}{s}\right) = \frac{pr}{qs}$$
+
+\paragraph*{Solution to 98$\alpha$.}
+The operations are clearly abelian and form appropriate group products (see
+\textbf{87$\delta$} for addition). $0/1$ is the additive identity (which is
+the same polynomial as $0/p$, $0/q$, etc.) and $1/1$ is the multiplicative identity
+(which is the same polynomial as $p/p$, $q/q$, etc.). $p/q$ has additive inverse
+$-p/q$ and multiplicative inverse $q/p$ when $p \neq 0$. Finally,
+\begin{eqnarray*}
+\frac{p}{q}\left(\frac{r}{s} + \frac{t}{u}\right) & = &
+    \left(\frac{p}{q}\right)\left(\frac{ru+ts}{su}\right) \\
+& = & \frac{pru+pts}{qsu} \\
+& = & \frac{pr}{qs} + \frac{pt}{qu} \\
+& = & \frac{p}{q}\frac{r}{s} + \frac{p}{q}\frac{t}{u}
+\end{eqnarray*}
+and
+\begin{eqnarray*}
+\left(\frac{p}{q}+\frac{r}{s}\right)\frac{t}{u} & = &
+    \left(\frac{ps+qr}{qs}\right)\left(\frac{t}{u}\right) \\
+& = & \frac{pst+qrt}{qsu} \\
+& = & \frac{pt}{qu} + \frac{rt}{su} \\
+& = & \frac{p}{q}\frac{t}{u} + \frac{r}{s}\frac{t}{u}
+\end{eqnarray*}
+\subsection{Article 99.}
+
+\subsection{Article 100. Roots of polynomials}
+
+\subsubsection{Problem 100$\alpha$.}
+Verify the rules of formal differentiation: $(f+g)' = f' + g'$ and $(fg)' =
+f'g + fg'$.
+
+\paragraph*{Solution to 100$\alpha$.}
+We have $0' = 0$ and therefore $(f+0)' = f' = f' + 0'$ and $(f0)' = 0' = 0 =
+f'0 + f0'$. Reversing $f$ and $g$ gives $(0 + g)' = 0' + g'$ and $(0g) = 0'g + 0g'$.
+
+Suppose that $f$ and $g$ are not $0$. Without loss of generality, assume
+$n = \mbox{deg } f \geq \mbox{deg } g = m$. Then
+\begin{eqnarray*}
+(f+g)' & = & (c_1+d_1) + 2(c_2+d_2)x + \dots + m(c_m+d_m)x^{m-1} \\
+& & \hspace{15pt} + (m+1)c_{m+1}x^m + \dots + nc_n x^{n-1} \\
+& = & c_1 + 2c_2 x + \dots + nc_n x^{n-1} + d_1 + 2d_2 x + \dots + mc_m x^{m-1} \\
+& = & f' + g'
+\end{eqnarray*}
+?? must show $(fg)'$.
+
+\subsubsection{Problem 100$\beta$.}
+Show that a polynomial $f$ over a field $F$ and its derivative $f'$ have a common
+root $\alpha$ if and only if $(x-\alpha)^2$ divides $f$.
+
+\paragraph*{Solution to 100$\beta$.}
+Suppose $(x-\alpha)^2$ divides $f$. Then $f$ can be written $(x-\alpha)^2(qx)$
+for some polynomial $q$. By the product rule in \textbf{100$\alpha$}, we get
+$$f'x = ((x-\alpha)^2(qx))' = 2(x-\alpha)(qx) + (x-\alpha)^2(q'x)$$
+which shows that $f'x$ has a root $\alpha$.
+
+Now suppose that $(x-\alpha)^2$ does not divide $f$. Then either $(x-\alpha)$
+divides $f$ or it does not divide $f$. If $(x-\alpha)$ does not divide $f$, then $f$ has
+no root $\alpha$ and $f$ and $f'$ cannot have a common root $\alpha$. If $(x-\alpha)$
+does divide $f$, then $fx = (x-\alpha)(qx)$ for some polynomial $q$, and
+$$f'x = ((x-\alpha)(qx))' = (qx) + (x-\alpha)(q'x)$$
+Since $(x-\alpha)^2$ does not divide $f$, $(x-\alpha)$ must not divide $q$, so
+that $(x-\alpha)$ cannot divide $f'$. Thus $f'$ has no root $\alpha$.
+
+\subsubsection{Problem 100$\gamma$.}
+Show that there exists one and only one polynomial of degree $n$ or less over a
+field $F$ which assumes $n+1$ prescribed values $f\alpha_0 = \beta_0$,
+$f\alpha_1 = \beta_1$, $\dots$, $f\alpha_n = \beta_n$ where $\alpha_0, \alpha_1,
+\dots , \alpha_n$ are distinct elements of $F$.
+
+\paragraph{Solution to 100$\gamma$.}
+Consider the polynomial
+$$
+fx = \sum_{i=0}^n \beta_i \prod_{j \neq i}
+	\left( \frac{x-\alpha_j}{\alpha_i-\alpha_j} \right).
+$$
+There are $n$ terms in each product inside the sum, hence we have
+$\deg f <= n$. It is easy to see that $f\alpha_i = \beta_i$ for
+$i = 0, 1, \dots, n$. It remains to be seen that $fx$ is the only such
+polynomial.
+
+Suppose there are two polynomials $f$ and $g$ of degree $n$ or less such that
+$$
+\begin{array}{ccccc}
+f\alpha_0&=&\beta_0&=&g\alpha_0 \\
+f\alpha_1&=&\beta_1&=&g\alpha_1 \\
+& & \vdots & & \\
+f\alpha_n&=&\beta_n&=&g\alpha_n
+\end{array}
+$$
+Then the polynomial $f-g$ has $n+1$ roots at $\alpha_0, \alpha_1, \dots, \alpha_n$.
+Suppose it has degree $k$. Since $f$ and $g$ both have degree $n$ or less, we
+have $k <= n$. But we know that a polynomial with degree $k$ can have at most
+$k$ roots. Since $f-g$ has $n+1$ roots, we must have $f-g=0$, or $f=g$. Thus
+the polynomial $f$ above is unique.
+
+\subsubsection{Problem 100$\delta$.}
+Show that every element of a finite field with $q$ elements is a root of the
+polynomial $fx = x^q - x$.
+
+\paragraph*{Solution to 100$\delta$.}
+Since $F^*$ is cyclic (\textbf{100}), there is an element $\alpha$ that generates
+$F^*$ so $\left<\alpha\right> = F^*$ and $o(\alpha) = o(F^*) = q-1$, which implies
+$\alpha^{q-1} = 1$. Every element in $F^*$ can be written $\alpha^k$ for some $k$.
+Now we see that $f\alpha^k = (\alpha^k)^q - \alpha^k = (\alpha^q)^k - \alpha^k
+= \alpha^k - \alpha^k$.
+
+\subsubsection{Problem 100$\zeta$.}
+For $p$ a prime construct a group isomorphism $\mathbb{Z}_{p-1} \rightarrow \mathbb{Z}'_p$.
+
+\paragraph*{Solution to 100$\zeta$.}
+Let $\phi : \mathbb{Z}_{p-1} \rightarrow \mathbb{Z}'_p$ be defined as
+$\phi([k]_{p-1}) = [2^k]_p$. ??
+\subsection{Article 101. Fundamental Theorem of Algebra}
+
+\subsubsection{Problem 101$\alpha$.}
+Show that every polynomial over $\mathbb{R}$ of positive degree can be factored
+into a product of polynomials over $\mathbb{R}$ with degree 1 or 2.
+
+\paragraph*{Solution to 101$\alpha$.}
+By induction on $\mbox{deg } f$, $f$ any polynomial over $\mathbb{R}$. For
+$\mbox{deg } f = 1$ and $\mbox{deg } f = 2$ the theorem is trivially true.
+
+Suppose $\mbox{deg } f > 2$ and the theorem is true for all polynomials with
+degree less than $n$. If $f$ has a root $\alpha$ in $\mathbb{R}$, we can write
+$fx = (x-\alpha)(qx)$ for some polynomial $q$ over $\mathbb{R}$. Since $q$ can
+be written as a product of polynomials with degree 1 or 2, we are finished.
+
+So suppose $f$ has no root in $\mathbb{R}$. Since $\mbox{deg } f = n$, $f$ has
+$n$ roots in $\mathbb{C}$. ??
+Somehow get to $fx = (x-\alpha)(x-\overline{\alpha})(qx)$.
+\subsection{Article 102. Irreducibility}
+
+\subsubsection{Problem 102$\alpha$.}
+Show that a polynomial irreducible over $\mathbb{R}$ has degree 1 or 2.
+
+\paragraph*{Solution to 102$\alpha$.}
+This follows from \textbf{101$\alpha$}: if $f$ is a polynomial over $\mathbb{R}$
+with degree greater than 2, $f$ can be written as a product of polynomials over
+$\mathbb{R}$ each with degree 1 or 2, hence $f$ is reducible, hence any
+irreducible polynomial over $\mathbb{R}$ must have degree 1 or 2.
+
+\subsubsection{Problem 102$\beta$.}
+Show that every polynomial of positive degree over a field $F$ is divisible
+by a polynomial irreducible over $F$.
+
+\paragraph*{Solution to 102$\beta$.}
+By induction. The theorem is true for polynomials over $F$ of degree 1: $f \mid f$ for
+any $f$ and if $\mbox{deg } f = 1$ then $f$ is divisible by an irreducible
+polynomial over $F$ since all polynomials over $F$ with degree 1 are irreducible.
+
+Suppose $\mbox{deg } f > 1$ and that the theorem holds for all polynomials over $F$
+with degree less than $n$. If no polynomial over $F$ divides $f$, then $f$
+is irreducible and we are done since $f \mid f$. Otherwise, $f$ is divisible
+by some polynomial $g$ over $F$ and $f = qg$ for some polynomial $q$ over $F$.
+Since $\mbox{deg } g < n$, $g$ can be written $g = ph$, $h$ an irreducible
+polynomial over $F$ and $p$ some polynomial over $F$. Hence, $f = qg = q(ph)
+= (qp)h$ and $h \mid f$, showing that $f$ is divisible by an irreducible polynomial
+over $F$.
+
+\subsubsection{Problem 102$\epsilon$.}
+Determine all the monic polynomials of degree 2 and 3 that are irreducible over
+$\mathbb{Z}_3$.
+
+\paragraph*{Solution to 102$\epsilon$.}
+For degree 2, we have
+$$
+\begin{array}{ccccccl}
+x^2 &   &    &   &   & = & (x)(x) \\
+x^2 &   &    & + & 1 & = & \mbox{irreducible} \\
+x^2 &   &    & + & 2 & = & (x+1)(x+2) \\
+x^2 & + &  x &   &   & = & (x)(x+1) \\
+x^2 & + &  x & + & 1 & = & (x+2)(x+2) \\
+x^2 & + &  x & + & 2 & = & \mbox{irreducible} \\
+x^2 & + & 2x &   &   & = & (x)(x+2) \\
+x^2 & + & 2x & + & 1 & = & (x+1)(x+1) \\
+x^2 & + & 2x & + & 2 & = & \mbox{irreducible} \\
+\end{array}
+$$
+
+For degree 3, we have
+$$
+\begin{array}{ccccccccl}
+x^3 &   &      &   &    &   &   & = & (x)(x^2) \\
+x^3 &   &      &   &    & + & 1 & = & (x+1)(x^2+2x+1) \\
+x^3 &   &      &   &    & + & 2 & = & (x+2)(x^2+x+1) \\
+x^3 &   &      & + &  x &   &   & = & (x)(x^2+1) \\
+x^3 &   &      & + &  x & + & 1 & = & (x+2)(x^2+x+2) \\
+x^3 &   &      & + &  x & + & 2 & = & (x+1)(x^2+2x+2) \\
+x^3 &   &      & + & 2x &   &   & = & (x)(x^2+2) \\
+x^3 &   &      & + & 2x & + & 1 & = & \mbox{irreducible} \\
+x^3 &   &      & + & 2x & + & 2 & = & \mbox{irreducible} \\
+x^3 & + &  x^2 &   &    &   &   & = & (x)(x^2+x) \\
+x^3 & + &  x^2 &   &    & + & 1 & = & (x+2)(x^2+2x+2) \\
+x^3 & + &  x^2 &   &    & + & 2 & = & \mbox{irreducible} \\
+x^3 & + &  x^2 & + &  x &   &   & = & (x)(x^2+x+1) \\
+x^3 & + &  x^2 & + &  x & + & 1 & = & (x+1)(x^2+1) \\
+x^3 & + &  x^2 & + &  x & + & 2 & = & \mbox{irreducible} \\
+x^3 & + &  x^2 & + & 2x &   &   & = & (x)(x^2+x+2) \\
+x^3 & + &  x^2 & + & 2x & + & 1 & = & \mbox{irreducible} \\
+x^3 & + &  x^2 & + & 2x & + & 2 & = & (x+2)(x^2+2x+1) \\
+x^3 & + & 2x^2 &   &    &   &   & = & (x)(x^2+2x) \\
+x^3 & + & 2x^2 &   &    & + & 1 & = & \mbox{irreducible} \\
+x^3 & + & 2x^2 &   &    & + & 2 & = & (x+1)(x^2+x+2) \\
+x^3 & + & 2x^2 & + &  x &   &   & = & (x)(x^2+2x+1) \\
+x^3 & + & 2x^2 & + &  x & + & 1 & = & \mbox{irreducible} \\
+x^3 & + & 2x^2 & + &  x & + & 2 & = & (x+2)(x^2+1) \\
+x^3 & + & 2x^2 & + & 2x &   &   & = & (x)(x^2+2x+2) \\
+x^3 & + & 2x^2 & + & 2x & + & 1 & = & (x+1)(x^2+x+1) \\
+x^3 & + & 2x^2 & + & 2x & + & 2 & = & \mbox{irreducible} \\
+\end{array}
+$$
+\subsection{Article 103.}
+
+\subsubsection{Problem 103$\beta$.}
+Show that the operations of addition and multiplication defined on $F[x]/(q)$
+by
+$$[f]_q + [g]_q = [f+g]_q$$
+$$[f]_q [g]_q = [fq]_q$$
+are well defined. Prove that they define a field structure on $F[x]/(q)$ if
+and only if $q$ is irreducible over $F$.
+
+\paragraph*{Solution to 103$\beta$.}
+
+We need to show that $[f]_q = [f']_q$ and $[g]_q = [g']_q$ imply
+$[f+g]_q = [f'+g']_q$. Suppose $[f]_q = [f']_q$ and $[g]_q = [g']_q$. Then
+$f = f' + rq$ for some polynomial $r$ over $F$, and $g = g' + sq$ for some
+polynomial $s$ over $F$. Now $f + g = f' + rq + g' + sq = f' + g' + (r + s)q$
+which shows that $[f+g]_q = [f'+g']_q$.
+
+Now we need to show that $[f]_q = [f']_q$ and $[g]_q = [g']_q$ imply
+$[fg]_q = [f'g']_q$, so suppose $[f]_q = [f']_q$ and $[g]_q = [g']_q$. Then
+$f = f' + rq$ for some polynomial $r$ over $F$, and $g = g' + sq$ for some
+polynomial $s$ over $F$. Now $fg = (f'+rq)(g'+sq) = f'g' + g'rq + f'sq + rsq^2
+= f'g' + (g'r + f's + rsq) q$ which implies $[fg]_q = [f'g']_q$.
+
+\subsubsection{Problem 103$\delta$.}
+Show that the field $\mathbb{R}/(x^2+1)$ is isomorphic to the field of complex
+numbers $\mathbb{C}$.
+
+\paragraph*{Solution to 103$\delta$.}
+Define $\phi: \mathbb{R}/(x^2+1) \rightarrow \mathbb{C}$ by
+$\phi([0]_{x^2+1}) = 0$, $\phi([1]_{x^2+1}) = 1$, and $\phi([x]_{x^2+1}) = i$.
+
+\subsubsection{Problem 103$\epsilon$.}
+Show that the field $\mathbb{Q}/(x^2-2)$ is isomorphic to the field
+$\mathbb{Q}(\sqrt{2})$.
+
+\paragraph*{Solution to 103$\epsilon$.}
+Define $\phi: \mathbb{Q}/(x^2-2) \rightarrow \mathbb{Q}(\sqrt{2})$ by
+$\phi([0]_{x^2-2}) = 0$, $\phi([1]_{x^2-2}) = 1$, and $\phi([x]_{x^2-2}) = \sqrt{2}$.
+\subsection{Article 104.}
+
+No exercises.
+\subsection{Article 105.}
+
+No exercises.
+\subsection{Article 106.}
+
+No exercises.
+\subsection{Article 107.}
+
+\subsubsection{Problem 107$\beta$.}
+Show that the polynomial $\Phi_p x = 1 + x + \dots + x^{p-1}$ is irreducible
+over $\mathbb{Q}$ for $p$ a prime.
+
+\paragraph*{Solution to 107$\beta$.}
+Note $\Phi_p x = (x^p - 1) / (x - 1)$.
+$\Phi_p$ is irreducible over $\mathbb{Q}$ if and only if $\Phi_p(x+1)$ is
+irreducible over $\mathbb{Q}$.
+\begin{eqnarray*}
+\Phi_p(x+1) &=& \frac{(x+1)^p - 1}{(x+1) - 1} \\
+&=& x^{p-1} + {{p}\choose{p-1}} x^{p-2} + \dots + {{p}\choose{2}} x + {{p}\choose{1}}
+\end{eqnarray*}
+The Eisenstein criterion applies to $\Phi_p(x+1)$ since $p \divides {{p}\choose{k}}$
+for $k = 1, \dots, p-1$, $p \notdivides 1$, and $p^2 \notdivides {{p}\choose{1}}$.
+
+\subsubsection{Problem 107$\gamma$.}
+By means of the Eisenstein criterion, show that the cubic $4x^3-3x-1/2$ is
+irreducible over $\mathbb{Q}$.
+
+\paragraph*{Solution to 107$\gamma$.}
+$fx = 4x^3 - 3x - 1/2$ is irreducible if and only if $gx = f(x+1/2) =
+4x^3 + 6x^2 - 3/2$ is irreducible (see 102$\zeta$). $g$ is irreducible if and
+only if $hx = 2gx = 8x^3 + 12x^2 - 3$ is irreducible. The Eisenstein criterion
+applies to $h$ since $3 \divides 3$, $3 \divides 12$, $3 \notdivides 8$, and
+$3^2 \notdivides 3$.
+
+
+\section{Algebraic extensions}
+
+
+\subsection{Article 108. Algebraic Numbers}
+
+\subsubsection{Problem 108$\alpha$.}
+Prove that the sum, $c + \alpha$, and product, $c\alpha$, of a rational number
+$c$ and an algebraic number $\alpha$ are algebraic numbers.
+
+\paragraph*{Solution to 108$\alpha$.}
+Suppose $\alpha$ is an algebraic number, i.e., algebraic over $\mathbb{Q}$. Then
+there exists a polynomial $f$ over $\mathbb{Q}$ such that $f\alpha = 0$. Since
+$c$ is rational, $gx = f(x-c)$ and $hx = f(x/c)$ are both polynomials over
+$\mathbb{Q}$. By definition, $g(c+\alpha) = f((c+\alpha)-c) = f\alpha = 0$
+and $h(c\alpha) = f((c\alpha)/c) = f\alpha = 0$, $c+\alpha$ and $c\alpha$
+are algebraic numbers.
+
+\subsubsection{Problem 108$\beta$.}
+Prove that $\cos (k\pi)$ is an algebraic number whenever $k$ is rational.
+
+\paragraph*{Solution to 108$\beta$.}
+Let $k$ be rational, $k = p/q$. ??
+\subsection{Article 109. Minimal Polynomials}
+
+\subsubsection{Problem 109$\alpha$.}
+Let $f$ be a polynomial irreducible over $F$, and let $E$ be an extension
+field of $F$ in which $f$ has a root $\alpha$. Show that $f$ is a minimal
+polynomial for $\alpha$ over $F$.
+
+\paragraph{Solution to 109$\alpha$.}
+Suppose $f$ is not a minimal polynomial for $\alpha$ over $F$. Then there
+exists a minimal polynomial $g$ for $\alpha$ over $F$ with $\deg g < \deg f$
+and $g\alpha = 0$. Since $g$ is a minimal polynomial, it divides any polynomial
+over $F$ having $\alpha$ as a root. We then have $f = hg$ for some $h$,
+contradicting the irreducibility of $f$.
+
+\subsubsection{Problem 109$\beta$.}
+Let $F \subset E \subset D$ be a tower of fields. Let $\alpha \in D$, and let
+$g$ be a minimal polynomial for $\alpha$ over $E$ and $f$ a minimal polynomial
+for $\alpha$ over $F$. Show that $g \mid f$ (considering both as polynomials
+over $E$).
+
+\paragraph{Solution to 109$\beta$.}
+Since $g$ is a minimal polynomial for $\alpha$ in $E$, we
+have that $g \mid f$ because $f\alpha = 0$.
+
+\subsubsection{Problem 109$\gamma$.}
+Find minimal polynomials over $\mathbb{Q}$ and $\mathbb{Q}(\sqrt{2})$ for the
+numbers $\sqrt{2} + \sqrt{3}$ and $i\sqrt{2} = \sqrt{-2}$.
+
+\paragraph*{Solution to 109$\gamma$.}
+$x^2 + 2$ is a minimal polynomial over $\mathbb{Q}$ for $i\sqrt{2}$.
+\subsection{Article 110.}
+
+\subsubsection{Problem 110$\beta$.}
+Let $\alpha$, $\beta$ be elements algebraic over the field $F$. Show that
+$F(\alpha, \beta) = F(\beta, \alpha)$. What can be said of the degree
+$[F(\alpha, \beta) : F]$?
+
+\paragraph*{Solution to 110$\beta$.}
+Let $\gamma \in F(\alpha, \beta)$. By \textbf{100},
+$\{ 1, \beta, \dots, \beta^{m-1} \}$ is a basis for
+$F(\alpha, \beta) = F(\alpha)(\beta)$, so $\gamma$ can be written
+$$\gamma = c_0 + c_1 \beta + \dots + c_{m-1} \beta^{m-1}$$
+where $c_0, c_1, \dots, c_{m-1} \in F(\alpha)$. Since
+$\{ 1, \alpha, \dots, \alpha^{n-1} \}$ is a basis for $F(\alpha)$, we
+can write each $c_j$ as
+$$ c_j = d_0^j + d_1^j \alpha + \dots + d_{n-1}^j \alpha^{n-1} $$
+where $d_0^j, d_1^j, \dots, d_{n-1}^j \in F$. Therefore, $\gamma$ can be written
+$$\gamma = \sum_j c_j \beta^j = \sum_j \left( \sum_k d_k^j \alpha^k \right) \beta^j $$
+Rearranging the order of summation gives
+$$\gamma = \sum_k \left( \sum_j d_k^j \beta_j \right) \alpha^k$$
+??
+\subsection{Article 111.}
+
+No exercises.
+\subsection{Article 112.}
+
+\subsection{Article 113.}
+
+\subsection{Article 114.}
+
+
+\section{Constructions with straightedge and compass}
+
+
+
+\subsection{Article 115. Axioms of Constructibility}
+
+No exercises.
+\subsection{Article 116.}
+
+No exercises.
+\subsection{Article 117.}
+
+No exercises.
+\subsection{Article 118.}
+
+No exercises.
+\subsection{Article 119. Constructible Numbers}
+
+No exercises.
+\subsection{Article 120.}
+
+\subsection{Article 121. Trisection of Angles}
+
+No exercises.
+
