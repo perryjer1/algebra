@@ -6,92 +6,87 @@
 
 
 \subsection{Article 150. Rings}
-\subsubsection{Problem 150$\gamma$.}
 
-\paragraph*{Solution to 150$\gamma$.}
+\paragraph{Problem 150$\gamma$.}
+
+\paragraph*{Solution}
 All the operations can be verified. For the unity element, try $(1, 0)$ where
 $0$ is the identity of the abelian group $R$.
 
 \subsection{Article 151. More rings}
-\subsubsection{Problem 151$\alpha$.}
+
+\paragraph{Problem 151$\alpha$.}
 Show that commutativity of addition in 150 is a redundant assumption by
 expanding $(a+1)(b+1)$ in two ways.
 
-\paragraph*{Solution to Problem 151$\alpha$.}
+\paragraph*{Solution}
 We can expand as $(a+1)(b+1) = (a+1)b + (a+1)1 = ab + b + a + 1$. We can also
 expand as $(a+1)(b+1) = a(b+1) + 1(b+1) = ab + a + b + 1$. Equating the two
 gives $ a+b = b+a $.
 
-\subsubsection{Problem 151$\gamma$.}
+\paragraph{Problem 151$\gamma$.}
 Show that the unity element of a ring is unique.
 
-\paragraph*{Solution to Problem 151$\gamma$.}
+\paragraph*{Solution}
 Suppose we have two unity elements $1 $ and $1'$. Then $ 1' = 1' 1 = 1$.
 
 \subsection{Article 152. Integral domains}
-\subsubsection{Problem 152$\alpha$.}
+
+\paragraph{Problem 152$\alpha$.}
 Show that a unit element of a ring cannot be a zero divisor.
 
-\paragraph*{Solution to 152$\alpha$.}
+\paragraph*{Solution}
 Suppose the unit element $1$ is a zero divisor. Then there exists a non-zero
 element $ b $ such that $ 1 b = 0$. But we also have $ 1 b = b$ which gives $ b
 = 0$, a contradiction.
 
-\subsubsection{Problem 152$\beta$.}
+\paragraph{Problem 152$\beta$.}
 Show that the product of a zero divisor and any ring element is a zero divisor.
 
-\paragraph*{Solution to 152$\beta$.}
+\paragraph*{Solution}
 Let $a$ be a zero divisor and $c$ be any ring element, and let their product be
 $ ac = d$. Since $a$ is a zero divisor, there exists a non-zero element $b$
 such that $ab = 0$. Then we have $ db = (ac)b = (ab)c = 0 $ so that $d$ is also
 a zero divisor.
 
-\subsubsection{Problem 152$\gamma$.}
+\paragraph{Problem 152$\gamma$.}
 Let $a$ and $b$ be elements of a ring whose product $ab$ is a zero divisor. Show
 that either $a$ or $b$ is a zero divisor.
 
-\paragraph*{Solution to 152$\gamma$.}
+\paragraph*{Solution}
 Suppose $(ab)c = 0$ for some nonzero element $c$. If $bc=0$,
 then $b$ is a zero divisor. Otherwise, $bc$ is nonzero and we have
 $(ab)c = a(bc) = 0$ and therefore $a$ is a zero divisor.
 
-\subsubsection{Problem 152$\delta$}
+\paragraph{Problem 152$\delta$}
 Give examples to show that the sum of two zero divisors need not be a zero
 divisor.
 
-\paragraph*{Solution to 152$\delta$}
+\paragraph*{Solution}
 In $\mathbb{Z}_6$, $[2]_6$ and $[3]_6$ are both zero divisors because
-$[2]_6 [3]_6 = [0]_6$, but $[2]_6  + [3]_6 = [5]_6$ is not a zero divisor.
-\subsection{Article 153.}
-
-\subsection{Article 154. The Ring of Gaussian Integers}
-
-No exercises.
-\subsection{Article 155. Kummer Rings}
-
-No exercises.
-\subsection{Article 156.}
+$[2]_6 [3]_6 = [0]_6$, but $[2]_6  + [3]_6 = [5]_6$ is not a zero
+divisor.
 
 
 \section{Ideals}
 
-
 \subsection{Article 157. Ideals}
-\subsubsection{Problem 157$\alpha$.}
+
+\paragraph{Problem 157$\alpha$.}
 Prove that the intersection $ \ideal a \cap \ideal b $ of two ideals $\ideal a$
 and $\ideal b$ of a ring $R$ is again an ideal of $R$.
 
-\paragraph*{Solution to 157$\alpha$.}
+\paragraph*{Solution}
 Since $\ideal a$ and $\ideal b$ are subgroups, $\ideal a \cap \ideal b$ is a
 subgroup (see 35$\beta$). If $ x \in \ideal a \cap \ideal b$ and $ r \in R $,
 then $x \in \ideal a $ and $ rx \in \ideal  a$, $ x \in \ideal b$ and $ rx \in
 \ideal b$, so that $ rx \in \ideal a \cap \ideal b$.  Thus $ \ideal a \cap
 \ideal b $ is an ideal.
 
-\subsubsection{Problem 157$\beta$.}
+\paragraph{Problem 157$\beta$.}
 Prove that an ideal containing a unit element is the whole ring.
 
-\paragraph*{Solution to 157$\beta$.}
+\paragraph*{Solution}
 If $ 1 \in \ideal a $ and $r \in R$ then $ r1 = r \in \ideal a$. Hence $R
 \subset \ideal a$ and therefore $ R = \ideal a$ if $ 1 \in \ideal a$.
 
@@ -99,20 +94,21 @@ Let $ x \in \ideal a$ be a unit. Then $x^{-1} \in R$ so that $ x^{-1} x = 1 \in
 \ideal a$.
 
 \subsection{Article 158. Principal Ideals}
-\subsubsection{Problem 158$\alpha$.}
+
+\paragraph{Problem 158$\alpha$.}
 Show that an element $a$ of a ring $R$ is a unit if and only if $ (a) = R$.
 
-\paragraph*{Solution to 158$\alpha$.}
+\paragraph*{Solution}
 Suppose $ (a) = R$. Then $ 1 \in (a)$ and $ 1 = ra$ for some $r \in R$. This
 implies $ r = a^{-1}$ and thus $a$ is a unit element.
 
 Suppose $ a $ is a unit element. Then $ 1 = a^{-1} a \in (a)$ (since $a^{-1}
 \in R$) and $ 1 \in (a)$ implies $(a) = R$ (see 157$\beta$).
 
-\subsubsection{Problem 158$\beta$.}
+\paragraph{Problem 158$\beta$.}
 Show that $(a) \subset (b)$ if and only if $a = rb$ for some $r$.
 
-\paragraph*{Solution to 158$\beta$.}
+\paragraph*{Solution}
 Suppose $(a) \subset (b)$. Then $ a \in (b) $ which means $ a = rb $ for some $
 r \in R$.
 
@@ -120,10 +116,10 @@ Suppose $ a = rb $ for some $ r \in R$. Pick $x \in (a)$. Then $ x = r'a $ for
 some $ r' \in R$. Hence $x = r'(rb) = (r'r)b $ and $ x \in (b) $ since $r'r \in
 R$.
 
-\subsubsection{Problem 158$\gamma$.}
+\paragraph{Problem 158$\gamma$.}
 Show that $(a) = (b)$ if and only if $a = ub$ for some unit element $u$.
 
-\paragraph*{Solution to 158$\gamma$.}
+\paragraph*{Solution}
 Suppose $(a) = (b)$. Then $a \in (b)$, $b \in (a)$, $a = rb$ and $ b = r'a$ for
 some $ r, r' \in R$. Combining the two we get $ b = (r'r)b$ so $r'r = 1$ and $
 r $ is a unit.
@@ -132,12 +128,12 @@ Suppose $ a = ub$, $u$ a unit. Then $ u^{-1}a = b$. Pick $ x \in (b)$. Then $ x
 = r'b = r' u^{-1} a$ and we then have $ x \in (a) $. Hence $ (b) \subset (a)$.
 Now by 158$\beta$ we have $ (a) \subset (b) $ so in fact $ (a) = (b) $.
 
-\subsubsection{Problem 158$\delta$.}
+\paragraph{Problem 158$\delta$.}
 Prove that in the ring of integers $\mathbb{Z}$, $(m) \cap (n) = ([m,n])$,
 where $[m,n]$ denotes the least common multiple of $m$ and $n$ (\textbf{23
 $\gamma$}).
 
-\paragraph*{Solution to 158$\delta$.}
+\paragraph*{Solution}
 By definition, $$ (m) = \left\{ x \in \mathbb{Z} \mid x = km, k \in \mathbb{Z}
 \right\} $$ and similarly for $(n)$. Then $ y \in (m) \cap (n) $ implies $ y =
 km $ and $y = ln $ for some $k, l \in \mathbb{Z}$ so that $y$ is a common
@@ -149,12 +145,12 @@ Now suppose $ y \in ([m,n])$. Then $ y = k'[m,n] $ for some $k' \in
 for some $l \in \mathbb{Z}$, so that $ y \in (m) $ and $ y \in (n)$ and
 $([m,n]) \subset (m) \cap (n)$.
 
-\subsubsection{Problem 158$\epsilon$.}
+\paragraph{Problem 158$\epsilon$.}
 Let $a$ and $b$ be elements of a domain $R$. Show that the set $$ \ideal c =
 \left\{ x \in R \mid x = ra + sb; r, s \in R \right\} $$ is an ideal of $R$ and
 that it is the smallest ideal of $R$ containing $(a)$ and $(b)$.
 
-\paragraph*{Solution to 158$\epsilon$.}
+\paragraph*{Solution}
 Taking $r = 1$ and $s = 0$ gives $a \in \ideal c$ so $\ideal c$ is not empty.
 If $m, n \in \ideal c$ then $m + n = (r_1 a + s_1 b) + (r_2 a + s_2 b) = (r_1 +
 r_2) a + (s_1 + s_2)b \in \ideal c$.  Also, if $ m \in \ideal c $ then $ -m =
@@ -169,11 +165,11 @@ sb \in (b) $. Since $ra \in \ideal d$ and $sb \in \ideal d$ by hypothesis, we
 have $ra + sb = x \in \ideal d$ since $\ideal d$ is an ideal.  Thus $ \ideal c
 \subset \ideal d $.
 
-\subsubsection{Problem 158$\eta$.}
+\paragraph{Problem 158$\eta$.}
 Prove that every ideal of the ring $\mathbb{Z}_n$ is principal. Is
 $\mathbb{Z}_n$ a principal ideal domain?
 
-\paragraph*{Solution to 158$\eta$.}
+\paragraph*{Solution}
 We only need to check proper ideals since $\{[0]_n\} = ([0]_n)$ and $\mathbb{Z}_n = (1)$.
 
 So let $\ideal x$ be a proper ideal of $\mathbb{Z}_n$. For $ [x]_n \in \ideal x$ and
@@ -183,16 +179,12 @@ If $n$ is prime, then $\mathbb{Z}_n$ is a principal ideal domain.  If $n$ is
 composite, $\mathbb{Z}_n$ cannot be a principal ideal domain because it has
 divisors of zero: if $n = km$, $[k]_n [m]_n = [km]_n = [0]_n$.
 
-\subsection{Article 159.}
-
-\subsection{Article 160.}
-
 \subsection{Article 161.}
 
-\subsubsection{Problem 161$\eta$.}
+\paragraph{Problem 161$\eta$.}
 Compute the following ideals.
 
-\paragraph*{Solution to 161$\eta$.}
+\paragraph*{Solution}
 \begin{itemize}
 \item $(2) + (3) = \mathbb{Z}$
 \item $(2) + (4) = (2)$
@@ -205,41 +197,7 @@ Compute the following ideals.
 \item $(2) : (6) = \mathbb{Z}$
 \item $(2) : (3) = (2)$
 \end{itemize}
-\subsection{Article 162.}
-
-\subsection{Article 163.}
-
-No exercises.
-\subsection{Article 164.}
-
-No exercises.
-\subsection{Article 165.}
-
-\subsection{Article 166.}
-
-\subsection{Article 167.}
-
-\subsection{Article 168.}
-
-No exercises.
 
 
 \section{Unique factorization}
 
-
-\subsection{Article 169.}
-
-\subsection{Article 170.}
-
-\subsection{Article 171.}
-
-\subsection{Article 172.}
-
-No exercises.
-\subsection{Article 173.}
-
-\subsection{Article 174.}
-
-\subsection{Article 175. Fermat's last theorem}
-
-No exercises.

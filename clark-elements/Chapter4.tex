@@ -5,10 +5,10 @@
 
 \subsection{Article 122.}
 
-\subsubsection{Problem 122$\gamma$.}
+\paragraph{Problem 122$\gamma$.}
 Determine the group of automorphisms of $\mathbb{Q}(i)$ and $\mathbb{Q}(\sqrt{2})$.
 
-\paragraph*{Solution to 122$\gamma$.}
+\paragraph*{Solution}
 We know $[\mathbb{Q}(i) : \mathbb{Q}] = 2$ since a minimal polynomial for $i$ over
 $\mathbb{Q}$ is $x^2 + 1$. Combined with \textbf{125}, we only need look for
 two automorphisms. The first is the identity, $\phi_1 (a + bi) = a+bi$. The
@@ -18,12 +18,12 @@ Similarly, $[\mathbb{Q}(\sqrt{2}) : \mathbb{Q}] = 2$ since $x^2 - 2$ is a minima
 polynomial for $\sqrt{2}$ over $\mathbb{Q}$. The two automorphisms are
 $\phi_1 (a+b\sqrt{2}) = a + b\sqrt{2}$ and $\phi_2 (a +b\sqrt{2}) = a-b\sqrt{2}$.
 
-\subsubsection{Problem 122$\epsilon$.}
+\paragraph{Problem 122$\epsilon$.}
 Let $\phi$ be an automorphism of a field $E$. Prove that the set
 $$ F = \{ \alpha \in E \mid \phi \alpha = \alpha \} $$
 is a subfield of $E$.
 
-\paragraph*{Solution to 122$\epsilon$.}
+\paragraph*{Solution}
 We need to show $F$ is a subgroup of $E$ under addition, and $F^*$ is a subgroup
 of $E^*$ under multiplication.
 
@@ -40,13 +40,15 @@ $\alpha \beta \in F^*$. For $\alpha \in F$, $1 = \phi(1) = \phi (\alpha \alpha^{
 \phi(\alpha) \phi(\alpha^{-1}) = \alpha \phi(\alpha^{-1})$ which implies
 $\phi(\alpha^{-1}) = \alpha^{-1}$; hence $\alpha^{-1} \in F^*$. This shows that $F^*$ is a
 subgroup of $E^*$ under multiplication.
+
 \subsection{Article 123. Fixed elements, fixed fields}
-\subsubsection{Problem 123$\alpha$.}
+
+\paragraph{Problem 123$\alpha$.}
 Let $\zeta = e^{2\pi i/5}$, and let $\phi$ denote the automorphism of
 $\mathbb{Q}(\zeta)$ given by $\phi \zeta = \zeta^4$. Prove that the fixed
 field of $\phi$ is $\mathbb{Q}(\sqrt{5})$.
 
-\paragraph*{Solution to 123$\alpha$.}
+\paragraph*{Solution}
 From $110$, we know that $\left\{1, \zeta, \zeta^2, \zeta^3 \right\}$
 is a basis for $\mathbb{Q}(\zeta)$; in other words, every element in $\mathbb{Q}(\zeta)$
 can be written $a + b\zeta + c\zeta^2 + d\zeta^3$ for $a, b,c,d \in \mathbb{Q}$.
@@ -63,19 +65,19 @@ a + b(\cos(4\pi/5)+\cos(6\pi/5)) = a - 2b\cos(\pi/5) = a - 2b(1+\sqrt{5})/4 =
 is equivalent to $a' + b'\sqrt{5}$ for $a',b' \in \mathbb{Q}$. This shows that
 the fixed field is in fact $\mathbb{Q}(\sqrt{5})$.
 
-\subsubsection{Problem 123$\beta$.}
+\paragraph{Problem 123$\beta$.}
 Let $\phi$ be an automorphism of a field $E$ leaving fixed the subfield $F$.
 Show that $\alpha \in E$ and a root of $f \in F[x]$ implies $\phi\alpha$ is also
 a root of $f$.
 
-\paragraph*{Solution to 123$\beta$.}
+\paragraph*{Solution}
 By hypothesis, we have $f\alpha = 0$. We can write $fx$ as
 $\sum_{k=0}^n a_k x^k$, where $a_k \in F$. Then we have
 $0 = \phi(0) = \phi(f\alpha) = \phi(\sum_{k=0}^n a_k \alpha^k)
 = \sum_{k=0}^n \phi(a_k) \phi(\alpha^k) = \sum_{k=0}^n a_k (\phi\alpha)^k
 = f(\phi\alpha)$.
 
-\subsubsection{Problem 123$\gamma$.}
+\paragraph{Problem 123$\gamma$.}
 Let $\phi$ be an automorphism of a field $E$ with fixed field $F$. Show that
 $\phi$ extends uniquely to a mapping $$\hat{\phi} : E[x] \rightarrow E[x]$$ with the
 following properties:
@@ -88,7 +90,7 @@ following properties:
 \end{enumerate}
 Furthermore, show that $\hat{\phi}(f) = f$ if and only if $f \in F[x]$.
 
-\paragraph*{Solution to 123$\gamma$.}
+\paragraph*{Solution}
 Define $\hat{\phi} : E[x] \rightarrow E[x]$ as follows:
 $$ \hat{\phi}\left(\sum_{k=0}^{n} a_k x^k\right) = \sum_{k=0}^{n} \phi(a_k)x^k$$
 Property 1 is obvious.
@@ -108,13 +110,13 @@ this with 1 and 4 gives $\hat{\phi}(c x^n) = \phi(c) x^n$. These show that
 $\hat{\phi}_1(c x^n) = \hat{\phi}_2(c x^n)$ for all $n$ and therefore
 $\hat{\phi}_1 = \hat{\phi}_2$.
 
-\subsubsection{Problem 123$\epsilon$.}
+\paragraph{Problem 123$\epsilon$.}
 Let $E$ be the splitting field in $\mathbb{C}$ of the polynomial $x^4 + 1$.
 Find automorphisms of $E$ which have fixed fields $\mathbb{Q}(\sqrt{-2})$,
 $\mathbb{Q}(\sqrt{2})$, and $\mathbb{Q}(i)$. Is there an automorphism
 with fixed field $\mathbb{Q}$?
 
-\paragraph*{Solution to 123$\epsilon$.}
+\paragraph*{Solution}
 Let $\xi = e^{\pi i / 4}$. Define automorphisms by
 $\phi_0 \xi = \xi$,
 $\phi_1 \xi = \xi^3$, $\phi_2 \xi = \xi^5$, and
@@ -125,20 +127,17 @@ is $\mathbb{Q}(\sqrt{-2})$.
 
 Since there are only four automorphisms (the identity being the fourth),
 there are no automorphisms with fixed field $\mathbb{Q}$.
-\subsection{Article 124.}
 
-No exercises.
-\subsection{Article 125.}
+\subsection{Article 126. Fixed fields of finite groups of
+  automorphisms}
 
-No exercises.
-\subsection{Article 126. Fixed fields of finite groups of automorphisms}
-\subsubsection{Problem 126$\beta$.}
+\paragraph{Problem 126$\beta$.}
 Find a group of automorphisms of $\mathbb{Q}(\zeta)$, where $\zeta = e^{2\pi i /5}$,
 of which the fixed field is $\mathbb{Q}$, and determine
 $\left[\mathbb{Q}(\zeta):\mathbb{Q}\right]$. How else can
 $\left[\mathbb{Q}(\zeta):\mathbb{Q}\right]$ be found?
 
-\paragraph*{Solution to 126$\beta$.}
+\paragraph*{Solution}
 A group $G$ of automorphisms is
 \begin{eqnarray}
 1_E(a+b\zeta+c\zeta^2+d\zeta^3) &=& a+b\zeta+c\zeta^2+d\zeta^3 \nonumber \\
@@ -155,66 +154,20 @@ $\psi(\phi) = [2]_5$, $\psi(\phi^2) = [4]_5$, and $\psi(\phi^3) = [3]_5$
 
 \section{Galois extensions}
 
-
-\subsection{Article 127.}
-
-\subsection{Article 128.}
-
-\subsection{Article 129.}
-
-\subsection{Article 130.}
-
 \subsection{Article 131.}
 
-\subsubsection{Problem 131$\alpha$.}
+\paragraph{Problem 131$\alpha$.}
 Express the following symmetric polynomials in terms of elementary
 symmetric functions.
 
-\paragraph*{Solution to 131$\alpha$.}
+\paragraph*{Solution}
 
 $$x_1^2 + x_1 x_2 + x_2^2 + x_2 x_3 + x_3^2 + x_3 x_1 = \sigma_1^2 - \sigma_2$$
 $$x_1^2 x_2^2 + x_2^2 x_3^2 + x_3^2 x_1^2 = \sigma_2^2 - 2\sigma_3$$
 $$(x_1-x_2)^2 (x_2-x_3)^2 (x_3-x_1)^2 = ??$$
 $$x_1^3 + x_2^3 + x_3^3 = \sigma_1^3 - 3(\sigma_1 \sigma_2 - \sigma_3)$$
 $$x_1^4 + x_2^4 + x_3^4 = ??$$
-\subsection{Article 132.}
-
-\subsection{Article 133.}
-
-\subsection{Article 134.}
-
-\subsection{Article 135.}
-
-No exercises.
-\subsection{Article 136.}
-
-\subsection{Article 137.}
-
-\subsection{Article 138.}
 
 
 \section{Solvability of equations by radicals}
-
-
-\subsection{Article 139.}
-
-\subsection{Article 140.}
-
-\subsection{Article 141.}
-
-\subsection{Article 142.}
-
-\subsection{Article 143.}
-
-\subsection{Article 144.}
-
-\subsection{Article 145.}
-
-\subsection{Article 146.}
-
-\subsection{Article 147.}
-
-\subsection{Article 148.}
-
-\subsection{Article 149.}
 
