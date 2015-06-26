@@ -587,6 +587,13 @@ Let $H$ be a subgroup of index 2 of a group $G$. Then there are only two left
 cosets and two right cosets. Since $H$ is both a left coset and right coset,
 the other left coset is the same as the other right coset, namely $H^c$.
 
+\paragraph{Problem 46$\lambda$.}
+Show that $Q$ is not isomorphic to $D_4$.
+
+\paragraph*{Solution}
+$Q$ has a single element of order 2 ($a^2$). $D_4$ has two elements of order
+2 ($\alpha^2$ and $\beta$). So they cannot be isomorphic.
+
 \subsection{Article 47.}
 
 \paragraph{Problem 47$\alpha$.}
@@ -616,6 +623,58 @@ $ \phi ((x+\mathbb{Z})(y+\mathbb{Z})) = \phi ((x+y)+\mathbb{Z}) = e^{2\pi i (x+y
 is understood that $x+y$ "wraps" around the $[0,1)$ interval as needed].
 
 \subsection{Article 48. Normalizer of a subset}
+
+\paragraph{Problem 48$\alpha$.}
+Find the normalizer of $\{\alpha\}$, $\{\beta\}$, and $<\alpha>$.
+
+\paragraph*{Solution}
+The normalizer of $\{\alpha\}$ is $\{e, \alpha, \alpha^2, \alpha^3,
+\alpha^4, \alpha^5\}$.
+The normalizer of $\{\beta\}$ is $\{e, \alpha^3,
+\beta, \beta\alpha^3\}$.
+The normalizer of $<\alpha>$ is $D_6$.
+
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}[ht]{cc}
+$\{\alpha\}^e = \{\alpha\}$  &
+  $\{\alpha\}^\beta = \{\beta \alpha \beta\} = \{\alpha^5\}$ \\
+$\{\alpha\}^{\alpha} = \{\alpha^5 \alpha \alpha\} = \{\alpha\}$ 
+  &  $\{\alpha\}^{\beta\alpha} = \{\beta \alpha \beta\} = \{\alpha^5\}$ \\
+$\{\alpha\}^{\alpha^2} = \{\alpha^4 \alpha \alpha^2\} = \{\alpha\}$
+  &  $\{\alpha\}^{\beta\alpha^2} = \{\alpha^5 \beta \alpha \beta \alpha\} = \{\alpha^5\}$ \\
+$\{\alpha\}^{\alpha^3} = \{\alpha\}$
+  &  $\{\alpha\}^{\beta\alpha^3} = \{\alpha^5\}$ \\
+$\{\alpha\}^{\alpha^4} = \{\alpha\}$
+  &  $\{\alpha\}^{\beta\alpha^4} = \{\alpha^5\}$ \\
+$\{\alpha\}^{\alpha^5} = \{\alpha\}$
+  &  $\{\alpha\}^{\beta\alpha^5} = \{\alpha^5\}$ \\
+\end{tabular}
+\end{center}
+\caption{Normalizer of $\alpha$ in $D_6$}
+\label{table:normalizers1_in_d6}
+\end{table}
+
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}[ht]{cc}
+$\{\beta\}^e = \{\beta\}$  &
+  $\{\beta\}^\beta = \{\beta \beta \beta\} = \{ \beta \}$ \\
+$\{\beta\}^{\alpha} = \{\alpha^5 \beta \alpha\} = \{\beta\alpha^2\}$ 
+  &  $\{\beta\}^{\beta\alpha} = \{\alpha^5\beta \beta \beta\alpha\} = \{\beta\alpha^2\}$ \\
+$\{\beta\}^{\alpha^2} = \{\alpha^4 \beta \alpha^2\} = \{\beta\alpha^4\}$
+  &  $\{\beta\}^{\beta\alpha^2} = \{\alpha^4 \beta \beta \beta \alpha^2\} = \{\beta\alpha^4\}$ \\
+$\{\beta\}^{\alpha^3} = \{\alpha^3 \beta \alpha^3\} = \{\beta\}$
+  &  $\{\beta\}^{\beta\alpha^3} = \{\alpha^3 \beta \beta \beta \alpha^3\} = \{\beta\}$ \\
+$\{\beta\}^{\alpha^4} = \{\beta\alpha^2\}$
+  &  $\{\beta\}^{\beta\alpha^4} = \{\beta\alpha^2\}$ \\
+$\{\beta\}^{\alpha^5} = \{\beta\alpha^4\}$
+  &  $\{\beta\}^{\beta\alpha^5} = \{\beta\alpha^4\}$ \\
+\end{tabular}
+\end{center}
+\caption{Normalizer of $\beta$ in $D_6$}
+\label{table:normalizers2_in_d6}
+\end{table}
 
 \paragraph{Problem 48$\gamma$.}
 Show that $N(S^a) = N(S)^a$ for any subset $S$ of a group $G$.
