@@ -227,5 +227,27 @@ $(p) = \ideal{a}$ and we are done). Then $(a,p) = 1$ which means $ma +
 np = 1$ for some $m, n$ and therefore $1 \in \ideal{a}$, or what is
 the same thing, $\ideal{a} = \mathbb{Z}$.
 
+\subsection{Article 169.}
+
+\paragraph{Problem 169$\alpha$.}
+Show two elements are associates if and only if they generate the same
+principal ideal.
+
+\paragraph*{Solution}
+Suppose $a = ub$. Then
+\begin{align*}
+(a) =& \{ x \in R | x = ra, r \in R \} \\
+    =& \{ x \in R | x = rub, r \in R \} \\
+    =& \{ x \in R | x = r'b, r' \in R \} \subset (b)
+\end{align*}
+Since $ru = 1$ for some $r$ and because $u$ is a unit, $b \in (a)$
+and it follows that $(b) \subset (a)$ because $(b)$ is the smallest
+ideal that contains $b$.
+
+Now suppose $(a) = (b)$. Then $a \in (b)$ implies $a = rb$ for some
+$r$, $b \in (a)$ implies $b = r'a = r'rb$ for some $r'$, which implies
+$r'r = 1$.
+
+
 \section{Unique factorization}
 
