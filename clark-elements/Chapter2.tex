@@ -851,10 +851,44 @@ By \textbf{16$\alpha$}, $\mathcal{A}(G)$ is a group.
 
 Pick $\phi \in \mathcal{A}(G)$. For any $\alpha_a \in \mathcal{I}(G)$,
 we have
-$$ (\phi^{-1} \alpha_a \phi)(g) = \phi^{-1}(a^{-1}\phi(g)a)
-= \phi^{-1}(a)^{-1} g \phi^{-1}(a) $$
+\begin{align*}
+(\phi^{-1} \alpha_a \phi)(g) =& \phi^{-1}(a^{-1}\phi(g)a) \\
+  =& \phi^{-1}(a)^{-1} \phi(g) \phi^{-1}(a)
+\end{align*}
 so that $\phi^{-1} \alpha_a \phi = \alpha_{\phi^{-1}(a)} \in \mathcal{I}(G)$.
-This shows $\mathcal{I}(G) \subset \mathcal{I}(G)^\phi$.
+%This shows $\mathcal{I}(G) \subset \mathcal{I}(G)^\phi$.
+
+\paragraph{Problem 64$\beta$.}
+Show that the quotient of a group by its center is isomorphic to its group
+of inner automorphisms, that is $G / Z_G \isomorphic \mathcal{I}(G)$.
+
+\paragraph*{Solution}
+Let $\phi(aZ_G) = \alpha_a$. This is well defined since $b \congruent a mod Z_G$
+implies $a^{-1}b=z$ and $a = bz^{-1}$ so that
+\begin{align*}
+\alpha_a =& a^{-1}ga \\
+=& (bz^{-1})^{-1}g(bz^{-1}) \\
+=& zb^{-1}gbz^{-1} \\
+=& zz^{-1}b^{-1}gb \\
+=& b^{-1}gb
+=& \alpha_b
+\end{align*}
+since $z$ commutes with all elements. It is onto and one to one with inverse
+$\phi^{-1} = \alpha_{a^{-1}}$. It is an isomorphism since
+$\phi((ab)Z_G) = \alpha_(ab) = b^{-1}a^{-1}gab = \alpha_a \alpha_b = \phi(aZ_G)\phi(bZ_G)$.
+
+\paragraph{Problem 64$\gamma$.}
+Show that for any finite group $G$, $o(G) >2$ implies $o(\mathcal{A}(G)) > 1$.
+
+\paragraph*{Solution}
+If $G - Z_G$ is not empty, pick $a \in G-Z_G$. Then $\alpha_a$ is an
+automorphism and not the identity.
+If $G-Z_G$ is empty, then $G$ is abelian. An automorphism is given by
+$\phi(g) = g^{-1}$ since
+$\phi(gh) = (gh)^{-1} = h^{-1}g^{-1} = g^{-1}h^{-1}= \phi(g)\phi(h)$.
+This is not equal to the identity unless $g = g^{-1}$ for all $g$.
+When $g = g^{-1}$ for all $g$, an automorphism is given by
+$\phi g = h$ for any $g$ and $h$ not $e$. ??
 
 \subsection{Article 67. Factoring homomorphisms}
 
@@ -872,6 +906,14 @@ $\beta : \mathbb{R} / \mbox{Ker } \phi \rightarrow \mbox{Im } \phi $ can be
 given by $ \beta (\gamma x) = e^{2\pi i (\gamma x)} = \phi (\gamma x)$.
 Lastly, $\alpha : \mbox{Im } \phi \rightarrow \mathbb{C}^* $ is given by
 $ \alpha ( \beta ( \gamma x ) ) = \beta (\gamma x) $.
+
+\paragraph{Problem 67$\beta$.}
+For any group $G$ let $\phi: G \rightarrow \mathcal{A}(G)$ be given by
+$\phi g = \alpha_{g^{-1}}$ (\textbf{64}). Decompose $\phi$ as above.
+
+\paragraph*{Solution}
+We have $Ker \phi = Z_G$ so $\gamma a = aZ_G$. Also, $Im \phi = \mathcal{I}(G)$
+so $\beta (aZ_G) = \alpha_{g^{-1}}$.
 
 \section{Normal and composition series}
 
